@@ -53,4 +53,7 @@
       </if>
     </trim>
   </insert>
+  <select id="selectStudentByid" resultMap="BaseResultMap">
+    select * from student where id = #{id}
+  </select>
 </mapper>

@@ -1,5 +1,6 @@
 package com.mybatisdemos.intercepters.sqlExecuteTimeCount;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.ParameterMapping;
@@ -30,6 +31,7 @@ import java.util.Properties;
         @Signature(type = StatementHandler.class, method = "update", args = {Statement.class}),
         @Signature(type = StatementHandler.class, method = "batch", args = {Statement.class})})
 @Component
+@Slf4j
 public class SqlExecuteTimeCountInterceptor implements Interceptor {
  
     private static Logger logger = LoggerFactory.getLogger(SqlExecuteTimeCountInterceptor.class);

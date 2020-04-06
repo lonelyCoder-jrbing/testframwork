@@ -6,10 +6,12 @@ import com.mybatisdemos.dao.studentinfodao.StudentDao;
 import com.mybatisdemos.domain.MyStudent;
 import com.mybatisdemos.domain.Student;
 import com.mybatisdemos.serivce.StudentService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class StudentServiceImpl implements StudentService {
     @Autowired
    private StudentDao studentDao;
@@ -20,8 +22,6 @@ public class StudentServiceImpl implements StudentService {
     public Student findStudentById(int id) {
         Student studentById = studentDao.findStudentById(id);
         return studentById;
-//    return null;
-
     }
 
 
