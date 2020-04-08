@@ -22,19 +22,19 @@ public class FinalizeEscaprGC {
         save_Hook = null;
         System.gc();
         //因为finalize方法优先级很低,暂停500秒执行
-       Thread.sleep(500);
-        if(save_Hook!=null){
+        Thread.sleep(500);
+        if (save_Hook != null) {
             save_Hook.isAlive();
-        }else {
+        } else {
             System.out.println("no i am dead!");
         }
-       //一个对象的finalize()方法只能被调用一次
+        //一个对象的finalize()方法只能被调用一次
         save_Hook = null;
         System.gc();
         Thread.sleep(500);
-        if(save_Hook!=null){
+        if (save_Hook != null) {
             save_Hook.isAlive();
-        }else {
+        } else {
             System.out.println("no i am dead");
         }
 

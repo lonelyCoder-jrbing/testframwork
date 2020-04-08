@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.springdemo.ioctest.cycleReferencetest")
+@ComponentScan(basePackages = "com.springdemo.cycleReferencetest")
 public class IocApp {
 //address中持有了user对象,而user中持有了address对象
     //启动时会报错:

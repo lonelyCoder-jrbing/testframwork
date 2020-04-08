@@ -1,0 +1,21 @@
+1.rabbitmq的死信队列的原理及其使用
+2.nacos整合  rabbitmq，springboot，es，dubbo
+3.dubbo的源码，原理，流程图
+
+
+
+=====================================================
+1. 粗略掌握hadoop的源码，理解mapreduce的过程
+2. flinksql stream ，batch，watermark的原理应用场景
+3. 掌握各种方式的序列化，序列化的原理，作用
+4. 掌握自定义注解
+5. 掌握springcloud的原理
+7. 对jdk8中的流的机制进行理解，是否和flink，spark中的这种流处理机制有关系，从jdk8中引进，是否是借鉴scala的
+8. 掌握scala编程语言的基础，顺便理解python3中的流处理机制，lambda表达式。
+9. 对并发包中的各种工具达到掌握，熟练使用
+10.平安项目中的分布式锁的应用场景，分布式事务的概念
+11.es各个版本的差异，es在业务中的具体应用场景
+12.java中的反射机制熟悉
+13.kafka的消息安全机制，如何保证数据的安全
+14.pg和mysql的区别和各自的优缺点，函数的差异细节
+15.spring，springmvc，mybatis中的各种拦截器的使用
