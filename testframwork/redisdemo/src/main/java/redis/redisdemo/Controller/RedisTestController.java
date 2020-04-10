@@ -1,22 +1,22 @@
 package redis.redisdemo.Controller;
-
 import org.redisson.api.RBucket;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.redisson.client.codec.StringCodec;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import java.util.concurrent.TimeUnit;
 
 @Controller
 @RequestMapping(value = "/redis")
 public class RedisTestController {
-
+    @Autowired
+    StringRedisTemplate redisTemplate;
     @Autowired
     private RedissonClient client;
 
@@ -37,9 +37,10 @@ public class RedisTestController {
             nameStr = (String) name.get();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }finally {
+            lock.unlock();
         }
         return nameStr;
-
     }
 
     @GetMapping(value = "/demo")
@@ -50,5 +51,10 @@ public class RedisTestController {
         return str;
     }
 
-
+    @GetMapping(value = "test02")
+    @ResponseBody
+    public String test01() {
+        redisTemplate.opsForValue().set("name", "jurongbing");
+        return redisTemplate.opsForValue().get("name");
+    }
 }
