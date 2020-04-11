@@ -1,4 +1,4 @@
-package flinkml.k-NearestNeighbors
+package flinkml.kNearestNeighbors
 
 import org.apache.flink.api.common.operators.base.CrossOperatorBase.CrossHint
 import org.apache.flink.api.scala._

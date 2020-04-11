@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="40574109-2822-4ef8-b18d-3af2f99e1119" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/testframwork/esdemo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/esdemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/esdemo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/esdemo/src/main/java/com/es/esdemo/EsdemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/esdemo/src/main/java/com/es/esdemo/EsdemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/esdemo/src/main/java/com/es/esdemo/EsdemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/esdemo/src/main/java/com/es/esdemo/config/ESconfigProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/esdemo/src/main/java/com/es/esdemo/controller/GetAgeByNameController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/esdemo/src/main/java/com/es/esdemo/requestTest/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/esdemo/src/main/java/com/es/esdemo/requestTest/Demo02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/esdemo/src/main/java/com/es/esdemo/requestTest/ElasticsearchBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/esdemo/src/main/java/com/es/esdemo/requestTest/HighLevelTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/esdemo/src/main/java/com/es/esdemo/requestTest/pojo/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/esdemo/src/main/java/com/es/esdemo/utils/EsScrollUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/BitSetTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/Demo0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/Demo00.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/Demo02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/Demo03.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/Demo04.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/Demo05.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/Demo06.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/Demo07.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/Demo08.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/Demo09.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/algorithm/utils/ListNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/async/AsyncApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/async/controller/DemoAsyncController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/async/dto/ResultDataDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/async/service/DemoAsyncService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/async/service/DemoAsyncServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/fiter/TimeTrackFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/intercepter/ClientTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/intercepter/Interceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/intercepter/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/intercepter/impl/InterceptorImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/intercepter/impl/InterceptorJdkProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/intercepter/impl/UserLoginInterceptorBySpring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/intercepter/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/asynctest/ExceptionHandlingAsyncTaskExecutor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/asynctest/TestAsync.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/asynctest/asyncByFuture/FutureTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/asynctest/asyncForSpring/MyConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/asynctest/asyncForSpring/MyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/ApplyTest/Test01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/ApplyTest/Test02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/ConsumerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/DealNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/MyConsumerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/MyFunction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/MyFunctionaInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/MyInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/MyPredict.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/Name.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/TaskOrderDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/Test01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/Test02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/consumer/MyConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/functionTest/functionForparam/Test01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/generalTypeTest/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/generalTypeTest/Apple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/generalTypeTest/Friut.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/generalTypeTest/GeneralTypeMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/generalTypeTest/ListUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/generalTypeTest/Plate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/generalTypeTest/Test01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/GeneratorTest/Duplicator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/GeneratorTest/MyGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/HigherOrderFunction/Closure4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/HigherOrderFunction/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/HigherOrderFunction/FuncSS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/HigherOrderFunction/ProduceFunction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/MethodReferences/Callable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/MethodReferences/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/MethodReferences/Demo02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/MethodReferences/Describe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/MethodReferences/MethodReferences.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/MethodReferences/ReduceInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/RecursiveFactorial/DemoThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/RecursiveFactorial/IntCall.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/RecursiveFactorial/RecursiveFactorial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/RecursiveFactorial/RecursiveFibonacci.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/StaticGenerator/Bubble.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/StaticGenerator/Bubbles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/StaticGenerator/Fibonacci.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/Usablefunctions/Looping.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/Usablefunctions/Repeat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/CachedThreadPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/CachedThreadPool2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/CachedThreadPool3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/CompletableOperations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/CompletedMachina.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/CountingStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/CountingTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/InterferingTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/LambdasAndMethodReferences.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/Machina.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/Nap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/NapTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/NotCallable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/NotRunnable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/QuittableTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/QuittingCompletable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/QuittingTasks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/SingleThreadExcutorTest02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/SingleThreadExecutor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/concurrent/utils/CompletableUtilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/enums/Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/enums/TrafficLight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/flapMapTest/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/flapMapTest/FileToWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/flapMapTest/FileToWordsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/flapMapTest/FlatMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/flapMapTest/FlatMapTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/flapMapTest/StreamOfRandoms.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/flapMapTest/WordCount02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/functionalYTest/Body.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/functionalYTest/Description.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/functionalYTest/LambdaExpressions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/functionalYTest/Multi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/mapTest/FunctionMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/peek/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/removeTest/Prime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/strategy/Soft.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/strategy/Strategize.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/strategy/Strategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/jdk8Thingking/strategy/Unrelated.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/mapTest/PutifAbsentTest01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/optionalTest/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/optionalTest/Studentsss.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/optionalTest/Test01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/optionalTest/Test02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/Teacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/Test01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/BinaryOperatorTest/BinaryOperatorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/ComposivePrictise/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/Demo02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/TestInterface/FunctionalInterfaceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/TestInterface/FunctionalInterfaceTest01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/Utils/CollectionProviders.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/buildPojo/Demo02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/buildPojo/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/filterTest/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/filterTest/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/groupTest/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/groupTest/Demo02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/impl/FunctionImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/reduceTest/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/reduceTest/Demo02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/reduceTest/Demo03.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/reduceTest/Demo04.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/jdk8/streamTest/lambdaTest/reduceTest/entities/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/test.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/implicitTest/Fraction.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/mapTest/Demo01.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/mapTest/Demo02.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/objectTest/Demo01.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/test01/Demo01.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/test01/Demo02.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/test02/CircularStatement.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/test02/Demo01.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/test02/Demo02.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/test02/Demo03.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/test02/Method.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/test02/MultiplicationTable.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/test02/OperatorReloadingMethod.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/wordcount/WC01.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/testscala/wordcount/controller.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/threadtest/CountDownLatchTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/vm/VmApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/vm/finalizeTest/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/vm/finalizeTest/FinalizeEscaprGC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/vm/methodZone/JavaMethodOOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/vm/methodZone/RuntimeConstantOOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/main/scala/com/testframwork/vm/vm/HeapOOm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/javaandscalatest/src/test/scala/com/testframwork/AppTest.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/mybatisdemo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/MybatisdemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/config/MybatisConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/config/MybatisConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/controller/studentinfo/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/controller/userinfo/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/dao/studentinfodao/CourseDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/dao/studentinfodao/MyStudentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/dao/studentinfodao/StudentDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/dao/studentinfodao/TestSelectOne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/dao/studentinfodao/impl/StudentDaoimpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/dao/userinfodao/IUserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/dao/userinfodao/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/domain/IUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/domain/MyStudent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/domain/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/dto/UserMsgLoadDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/intercepters/MyPageInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/intercepters/page/PageInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/intercepters/page/PageView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/intercepters/sqlExecuteTimeCount/SqlExecuteTimeCountInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/intercepters/sqlExecuteTimeCount/SqlExecuteTimeCountInterceptor2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/serivce/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/serivce/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/serivce/impl/StudentServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/serivce/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/vo/CodeMsg.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/java/com/mybatisdemos/vo/ResultVo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/resources/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/resources/db/my.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/resources/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/main/resources/mappers/myStudentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/test/java/com/mybatis/MybatisdemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/mybatisdemo/src/test/java/com/mybatis/MybatisdemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/mybatisdemo/src/test/java/com/mybatis/MybatisdemoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-consumer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/nacos-consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-consumer/src/main/java/com/example/nacosconsumer/NacosConsumerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-consumer/src/main/java/com/example/nacosconsumer/NacosConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/nacos-consumer/src/main/java/com/example/nacosconsumer/NacosConsumerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-consumer/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/nacos-consumer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-consumer/src/test/java/com/example/nacosconsumer/NacosConsumerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-consumer/src/test/java/com/example/nacosconsumer/NacosConsumerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/nacos-consumer/src/test/java/com/example/nacosconsumer/NacosConsumerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/nacos-provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/src/main/java/com/example/nacosprovider/NacosProviderApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/src/main/java/com/example/nacosprovider/NacosProviderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/nacos-provider/src/main/java/com/example/nacosprovider/NacosProviderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/src/main/java/com/test/demoprovider/service/DemoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/src/main/java/com/test/demoprovider/service/DemoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/nacos-provider/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/src/main/resources/application.ymlbak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/src/main/resources/application.ymlbak" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/nacos-provider/src/main/resources/application.ymlbak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/src/main/resources/applicationbak.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/src/test/java/com/example/nacosprovider/NacosProviderApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/nacos-provider/src/test/java/com/example/nacosprovider/NacosProviderApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/nacos-provider/src/test/java/com/example/nacosprovider/NacosProviderApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/rabbitmqtest/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/rabbitmqtest/src/main/java/consumer/Consumer2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/rabbitmqtest/src/main/java/consumer/ConsumerCircle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/rabbitmqtest/src/main/java/mqutil/ConnectionUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/rabbitmqtest/src/main/java/producer/Producer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/rabbitmqtest/src/main/java/producer/ProducerCircle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/rabbitmqtest/src/plan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/redisdemo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/main/java/redis/redisdemo/Controller/RedisTestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/main/java/redis/redisdemo/RedisdemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/main/java/redis/redisdemo/RedisdemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/redisdemo/src/main/java/redis/redisdemo/RedisdemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/main/java/redis/redisdemo/config/RedisConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/main/java/redis/redisdemo/config/RedisPoolConfigure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/main/java/redis/redisdemo/config/RedissionConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/main/java/redis/redisdemo/utils/Piple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/main/java/redis/redisdemo/utils/RedissionUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/main/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/redisdemo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/test/java/redis/redisdemo/RedisTest02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/test/java/redis/redisdemo/RedisdemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/redisdemo/src/test/java/redis/redisdemo/RedisdemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/redisdemo/src/test/java/redis/redisdemo/RedisdemoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/springdemo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanLoadorderTest/Appconfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanLoadorderTest/Man.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanLoadorderTest/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanNames/Ap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/annotationTest/AnnotationTestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/annotationTest/BusinessConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/annotationTest/Intercept.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/annotationTest/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/annotationTest/Test02/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/annotationTest/Test02/Collum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/annotationTest/Test02/StudentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/annotationTest/Test02/Table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/annotationTest/test01/Apple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/annotationTest/test01/FruitName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/annotationTest/test3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/configerations/CustomizeBeanPostProcessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/configerations/MyBeanPostprocessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/configerations/MyListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/configerations/SpringMVCInterceptors/MVCConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/configerations/SpringMVCInterceptors/SpringMVCInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/controller/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/service/CalculateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/service/impl/CaculateserviceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/utils/FileToWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/beanpostprocessorTest/utils/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/cycleReferencetest/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/cycleReferencetest/IocApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/cycleReferencetest/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/demoexception/DemoexceptionApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/demoexception/testglobal/ExceptionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/demoexception/testglobal/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/demoexception/testglobal/JsonResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/scheduletask/ScheduletaskApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/scheduletask/task/MonitorFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/scheduletask/task/People.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/scheduletask/task/Programmer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/scheduletask/task/TaskController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/java/com/springdemo/scheduletask/task/Teacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/springdemo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/test/java/com/springdemo/SpringdemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/springdemo/src/test/java/com/springdemo/SpringdemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/springdemo/src/test/java/com/springdemo/SpringdemoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkkafkaconsumer/Finkkafka.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkkafkaconsumer/FlinkJavaStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkkafkaconsumer/FlinkScalaStream.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkkafkaconsumer/ScalaConsumer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkkafkaconsumer/flinkVM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkkafkaproducer/KafkaWordProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkkafkaproducer/LogReader.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkkafkaproducer/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/SVMUsingCoCoA/SVMUsingCoCoA.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/SVMUsingCoCoA/Thaberman.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/SVMUsingCoCoA/Thaberman.data" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/SVMUsingCoCoA/Thaberman.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/SVMUsingCoCoA/haberman.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/SVMUsingCoCoA/haberman.data" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/SVMUsingCoCoA/haberman.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/haberman/Haberman.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/haberman/haberman.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/haberman/haberman.data" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/haberman/haberman.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/haberman/svmguide1.t" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/haberman/svmguide1.t" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/haberman/svmguide1.t" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/haberman/svmguide1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/haberman/svmguide1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/haberman/svmguide1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/k-NearestNeighbors/KNearestNeighbors.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/k-NearestNeighbors/KNearestNeighbors.scala" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/k-NearestNeighbors/KNearestNeighbors.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/k-NearestNeighbors/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/k-NearestNeighbors/train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/kNearestNeighbors/KNearestNeighbors.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/kNearestNeighbors/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinkml/kNearestNeighbors/train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinksql/TableApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/flinksql/score.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/iteration/Caculate.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/iteration/Fib.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/iteration/Vertex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/mapreduce/Demo01.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/mapreduce/Demo02.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/mapreduce/Demo03.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/mapreduce/Demo04.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/think" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/think" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/think" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/topNBooks/LineSpliter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/topNBooks/MyNoParalleSource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/topNBooks/TopNApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/topNBooks/TopNProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/topNBooks/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/waterMarkTest/StreamingWindowWatermark.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/waterMarkTest/WaterMarkFunc01.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/waterMarkTest/WaterMarkTest01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/waterMarkTest/WaterMarkTest02.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/waterMarkTest/WaterMarkTest04.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/main/scala/waterMarkTest/WatermarkTest.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/test/scala/com/testframwork/AppTest.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/testflink/src/test/scala/com/testframwork/MySpec.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/words" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testframwork/words" beforeDir="false" afterPath="$PROJECT_DIR$/testframwork/words" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven-3.0.5" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.0.5\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1300" />
+    <option name="height" value="730" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="40574109-2822-4ef8-b18d-3af2f99e1119" name="Default Changelist" comment="" />
+      <created>1586588136301</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586588136301</updated>
+      <workItem from="1586588139190" duration="53000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="53000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Analysis" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
