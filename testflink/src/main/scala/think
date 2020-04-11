@@ -17,10 +17,13 @@ kafka相关命令：
 
 5.查看消费者列表
 
+
+
   kafka-topics.bat --list --zookeeper localhost:2181
 
 
 
-  lll
+
+
 
 
