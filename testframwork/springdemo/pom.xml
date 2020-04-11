@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.springdemo</groupId>
     <artifactId>springdemo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+<!--    <version>0.0.1-SNAPSHOT</version>-->
     <name>springdemo</name>
     <description>Demo project for Spring Boot</description>
 
@@ -22,7 +22,7 @@
 
         <dependency>
             <groupId>com.testframwork</groupId>
-            <artifactId>testframwork</artifactId>
+            <artifactId>javaandscalatest</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

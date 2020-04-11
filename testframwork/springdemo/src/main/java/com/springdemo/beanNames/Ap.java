@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.springdemo.ioctest.beanNames"})
+@ComponentScan(basePackages = {"com.springdemo.beanNames"})
 public class Ap {
 
     public static void main(String[] args) {

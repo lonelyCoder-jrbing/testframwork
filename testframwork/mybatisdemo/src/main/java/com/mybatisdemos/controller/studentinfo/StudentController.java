@@ -26,4 +26,10 @@ public class StudentController {
     public void insertStudent(@RequestBody MyStudent student) {
         studentService.insert(student);
     }
+
+    @GetMapping(value = "/testSelectOne")
+    @ResponseBody
+    public MyStudent testSelectOne(int id) {
+      return   studentService.selectOne(id);
+    }
 }
