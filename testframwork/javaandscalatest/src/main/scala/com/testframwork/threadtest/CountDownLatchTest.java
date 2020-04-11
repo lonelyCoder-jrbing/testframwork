@@ -3,6 +3,9 @@ package com.testframwork.threadtest;
 import java.util.concurrent.*;
 
 /**
+ *1. 创建线程池将创建的线程放入线程池中，并且在线程的run方法中调用latch.countDown()
+ *2, 将所有的线程在线程池中执行
+ *3. 执行latch.await()方法
  * 1. 创建线程池将创建的线程放入线程池中，并且在线程的run方法中调用latch.countDown()
  * 2, 将所有的线程在线程池中执行
  * 3. 执行latch.await()方法
@@ -12,13 +15,12 @@ public class CountDownLatchTest {
 
     private static CountDownLatch latch = new CountDownLatch(1);
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException{
         System.out.println("主线程开始......");
         long startAt = System.currentTimeMillis();
-        System.out.println("startAt: " + System.currentTimeMillis());
+        System.out.println("startAt: "+System.currentTimeMillis());
         final int[] atest = {0};
-
-        Thread thread1 = new Thread(() -> {
+        Thread thread1 = new Thread(()->{
             try {
                 int anInt = getInt();
                 atest[0] = anInt;
@@ -45,6 +47,7 @@ public class CountDownLatchTest {
         threadPoolExecutor.shutdown();
         latch.await();
         long endTime = System.currentTimeMillis();
+        System.out.printf("used time "+(endTime-startAt));
         System.out.println("atest[0]:  "+atest[0]);
         System.out.printf("used time " + (endTime - startAt));
         System.out.printf("主线程等待。。。");
@@ -65,9 +68,9 @@ public class CountDownLatchTest {
             System.out.println("子线程任务正在执行");
             try {
                 Thread.sleep(2000);
-            } catch (InterruptedException e) {
+            }catch (InterruptedException e){
 
-            } finally {
+            }finally {
                 latch.countDown();
             }
         }
