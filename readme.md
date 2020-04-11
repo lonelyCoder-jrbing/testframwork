@@ -8,3 +8,6 @@ git 使用事项 ：
 5. git 创建远程分支 git  push https://github.com/lonelyCoder-jrbing/testframwork dev:dev 
    （第一个参数是本地分支名称，第二个参数是远程分支名称）
    注意：idea提示merge代码时候能点击取消，如果取消，可能发生覆盖别人代码的可能。
+   
+   
+   
