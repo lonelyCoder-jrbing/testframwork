@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/esdemo/esdemo.iml" filepath="$PROJECT_DIR$/esdemo/esdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaandscalatest/javaandscalatest.iml" filepath="$PROJECT_DIR$/javaandscalatest/javaandscalatest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisdemo/mybatisdemo.iml" filepath="$PROJECT_DIR$/mybatisdemo/mybatisdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-consumer/nacos-consumer.iml" filepath="$PROJECT_DIR$/nacos-consumer/nacos-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-provider/nacos-provider.iml" filepath="$PROJECT_DIR$/nacos-provider/nacos-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmqtest/rabbitmqtest.iml" filepath="$PROJECT_DIR$/rabbitmqtest/rabbitmqtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redisdemo/redisdemo.iml" filepath="$PROJECT_DIR$/redisdemo/redisdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springdemo/springdemo.iml" filepath="$PROJECT_DIR$/springdemo/springdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testflink/testflink.iml" filepath="$PROJECT_DIR$/testflink/testflink.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testframwork.iml" filepath="$PROJECT_DIR$/testframwork.iml" />
+    </modules>
+  </component>
+</project>
