@@ -19,6 +19,9 @@ kafka相关命令：
 
 
 
+
+
+
   kafka-topics.bat --list --zookeeper localhost:2181
 
 
