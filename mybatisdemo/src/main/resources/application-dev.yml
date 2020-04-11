@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+  type-aliases-package: com.mybatisdemos.domain
+logging:
+  level:
+    classpath:
+      mappers:
+        debug
