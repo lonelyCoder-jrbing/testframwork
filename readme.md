@@ -11,9 +11,8 @@ git 使用事项 ：
 6. git 创建远程分支 git  push https://github.com/lonelyCoder-jrbing/testframwork dev:dev 
    （第一个参数是本地分支名称，第二个参数是远程分支名称）
    注意：idea提示merge代码时候能点击取消，如果取消，可能发生覆盖别人代码的可能。
-   
-   
-   
+7. 当本地的文件名称和远程不相同时候(在已经拉去代码的情况之下)，可以使用git restore + filename 进行清除工作区的改变
+
    
    
    
