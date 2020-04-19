@@ -30,18 +30,17 @@ public class ListNode implements Iterable<ListNode> {
 class myIterator implements Iterator {
     ListNode data;
 
-//     public myIterator() {
-//       this.data = head;
-//     }
-
+    @Override
     public boolean hasNext() {
         return false;
     }
 
+    @Override
     public Object next() {
         return null;
     }
 
+    @Override
     public void remove() {
 
     }

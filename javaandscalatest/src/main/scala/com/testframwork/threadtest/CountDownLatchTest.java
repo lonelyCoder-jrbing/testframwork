@@ -6,9 +6,6 @@ import java.util.concurrent.*;
  *1. 创建线程池将创建的线程放入线程池中，并且在线程的run方法中调用latch.countDown()
  *2, 将所有的线程在线程池中执行
  *3. 执行latch.await()方法
- * 1. 创建线程池将创建的线程放入线程池中，并且在线程的run方法中调用latch.countDown()
- * 2, 将所有的线程在线程池中执行
- * 3. 执行latch.await()方法
  * 目的：达到所有线程并行执行的目的
  */
 public class CountDownLatchTest {

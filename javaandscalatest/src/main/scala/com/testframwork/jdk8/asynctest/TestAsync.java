@@ -3,6 +3,8 @@ package com.testframwork.jdk8.asynctest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 
+import javax.annotation.PostConstruct;
+
 /*
  * 同步调用：同步就是整个过程是顺序进行的，当各个过程都进行完毕之后，
  * 返回结果。
@@ -10,8 +12,19 @@ import org.springframework.scheduling.annotation.Async;
  * */
 public class TestAsync {
 
+    private static TestAsync testAsync;
+
     @Autowired
-    private ExceptionHandlingAsyncTaskExecutor exceptionHandlingAsyncTaskExecutor = new ExceptionHandlingAsyncTaskExecutor();
+    private ExceptionHandlingAsyncTaskExecutor exceptionHandlingAsyncTaskExecutor;
+
+    @PostConstruct
+    public void _init() {
+        testAsync = this;
+        testAsync.exceptionHandlingAsyncTaskExecutor = this.exceptionHandlingAsyncTaskExecutor;
+    }
+
+
+
 
     public static void main(String[] args) throws InterruptedException {
         System.out.println("=================main开始==================");
@@ -25,10 +38,10 @@ public class TestAsync {
     public void doSomethingWrong() throws InterruptedException {
         AppleTree apple = new AppleTree();
         Thread appleThread = new Thread(apple, "apple tree get apple");
-        appleThread.start();
-        appleThread.join(344);
-//      System.out.println("我先弄，你慢慢来。。。。");
-//    exceptionHandlingAsyncTaskExecutor.execute(appleThread);
+//        appleThread.start();
+//        appleThread.join(344);
+        System.out.println("我先弄，你慢慢来。。。。");
+        exceptionHandlingAsyncTaskExecutor.execute(appleThread);
 
     }
 

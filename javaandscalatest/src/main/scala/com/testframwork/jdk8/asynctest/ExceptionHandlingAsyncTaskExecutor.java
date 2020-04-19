@@ -1,5 +1,6 @@
 package com.testframwork.jdk8.asynctest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.task.AsyncTaskExecutor;
 import org.springframework.stereotype.Component;
 
@@ -9,30 +10,30 @@ import java.util.concurrent.Future;
 @Component
 public class ExceptionHandlingAsyncTaskExecutor implements AsyncTaskExecutor {
 
+    @Autowired
     private AsyncTaskExecutor executor;
 
-    public ExceptionHandlingAsyncTaskExecutor() {
-    }
 
-    public ExceptionHandlingAsyncTaskExecutor(AsyncTaskExecutor executor) {
-        this.executor = executor;
-    }
 
     //用独立的线程来包装，@Async其本质就是如此
+    @Override
     public void execute(Runnable task) {
         executor.execute(createWrappedRunnable(task));
     }
 
+    @Override
     public void execute(Runnable task, long startTimeout) {
         //用独立的线程来包装，@Async其本质就是如此
         executor.execute(createWrappedRunnable(task), startTimeout);
     }
 
+    @Override
     public Future submit(Runnable task) {
         return executor.submit(createWrappedRunnable(task));
         //用独立的线程来包装，@Async其本质就是如此。
     }
 
+    @Override
     public Future submit(final Callable task) {
         //用独立的线程来包装，@Async其本质就是如此。
         return executor.submit(createCallable(task));
@@ -40,6 +41,7 @@ public class ExceptionHandlingAsyncTaskExecutor implements AsyncTaskExecutor {
 
     private Callable createCallable(final Callable task) {
         return new Callable() {
+            @Override
             public Object call() throws Exception {
                 try {
                     return task.call();
@@ -53,6 +55,7 @@ public class ExceptionHandlingAsyncTaskExecutor implements AsyncTaskExecutor {
 
     private Runnable createWrappedRunnable(final Runnable task) {
         return new Runnable() {
+            @Override
             public void run() {
                 try {
                     task.run();
