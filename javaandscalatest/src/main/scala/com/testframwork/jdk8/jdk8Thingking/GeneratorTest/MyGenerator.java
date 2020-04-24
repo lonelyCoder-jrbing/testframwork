@@ -1,5 +1,6 @@
 package com.testframwork.jdk8.jdk8Thingking.GeneratorTest;
 
+import java.util.List;
 import java.util.Random;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -16,9 +17,13 @@ public class MyGenerator implements Supplier {
     }
 
     public static void main(String[] args) {
-        String str = (String) Stream.generate(new MyGenerator())
+//        List collect =(List) Stream.generate(new MyGenerator())
+//                .limit(30).collect(Collectors.toList());
+
+        String collect =(String) Stream.generate(new MyGenerator())
                 .limit(30).collect(Collectors.joining());
-        System.out.println(str);
+
+        System.out.println(collect);
 
     }
 

@@ -30,6 +30,7 @@ public class Demo02 {
 
         BinaryOperator<String> binaryOperator = (x, y) -> x + y;
         String binaryOperatorTest = binaryOperator.apply("jrbing", "byy");
+        System.out.println("binaryOperatorTest:   ");
         System.out.println(binaryOperatorTest);
 
 

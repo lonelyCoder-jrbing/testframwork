@@ -7,8 +7,7 @@ import java.util.stream.Stream;
 class FunctionMap {
     static String[] elements = {"12", "", "23", "45"};
 
-    static Stream<String>
-    testStream() {
+    static Stream<String> testStream() {
         return Arrays.stream(elements);
     }
 
