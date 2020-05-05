@@ -1,4 +1,4 @@
-package com.springdemo.initaillizebeanmethod.test;
+package com.springdemo.initaillizebeanmethod.controller;
 
 import com.springdemo.initaillizebeanmethod.InitializingBeanTest;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -23,8 +23,9 @@ public class TopNApp {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
+        //将处理时间设置为处理时间特征
         env.setStreamTimeCharacteristic(TimeCharacteristic.ProcessingTime);
-
+        //设置kafka的consumer
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
         FlinkKafkaConsumer<String> input = new FlinkKafkaConsumer<>("topn", new SimpleStringSchema(), properties);
@@ -32,8 +33,10 @@ public class TopNApp {
         DataStreamSource<String> stream = env.addSource(input);
         SingleOutputStreamOperator<Tuple2<String, Integer>> ds = stream.flatMap(new LineSpliter());
         DataStream<Tuple2<String, Integer>> wc = ds.keyBy(0)
+                //统计的是过去的一小时之内的热销图书，所以窗口的大小设置为一小时，每5秒钟做一次聚合。
                 .window(SlidingProcessingTimeWindows.of(Time.seconds(3600), Time.seconds(5)))
                 .sum(1);
+        //每隔5秒钟做一次聚合，计算出过去时间之内热销图书榜的前三名
         wc.windowAll(TumblingProcessingTimeWindows.of(Time.seconds(5)))
                 .process(new TopNAllFunction(3))
                 .print();
@@ -53,14 +56,14 @@ public class TopNApp {
         @Override
         public void process(Context context, Iterable<Tuple2<String, Integer>> elements, Collector<String> out) throws Exception {
 
-            TreeMap<Integer, Tuple2<String, Integer>> treemap = new TreeMap<>((x, y) -> (x < y) ? -1 : 1);
+            TreeMap<Integer, Tuple2<String, Integer>> treemap = new TreeMap<>((x, y) -> (x < y) ? 1 : -1);
             for (Tuple2<String, Integer> element : elements) {
                 treemap.put(element.f1, element);
                 if (treemap.size() > topNSize) {
                     treemap.pollLastEntry();
                 }
             }
-            treemap.forEach((k, v) -> out.collect("\n热销图书列表\n：" + new Timestamp(System.currentTimeMillis()) + treemap.toString() + "\n=============\n"));
+            treemap.forEach((k, v) -> out.collect("\n热销图书列表\n：" + new Timestamp(System.currentTimeMillis()) + "书名："+v.f0+".   "   +"总的销售量："+k +"\n=============\n"));
         }
     }
 }

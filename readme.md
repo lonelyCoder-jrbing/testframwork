@@ -14,7 +14,10 @@ git 使用事项 ：
 7. 当本地的文件名称和远程不相同时候(在已经拉去代码的情况之下)，可以使用git restore + filename 进行清除工作区的改变
 
    
-   
+windows中杀死进程的方式：
+1.tasklist | findstr “xxx”  （xxx为应用程序部分名称）
+
+2.taskkill -PID zzz -F  (zzz为tasklist显示的应用程序pid
    
    
    

@@ -2,6 +2,7 @@ package com.mybatisdemos.dao.userinfodao;
 
 import com.mybatisdemos.domain.IUser;
 import com.mybatisdemos.intercepters.page.PageView;
+import com.mybatisdemos.vo.ResultVo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
@@ -15,4 +16,5 @@ public interface IUserMapper {
     @Select("SELECT * FROM user")
     public List<IUser> getAllUserPage();
 
+    List<ResultVo> selectList(List<String> list);
 }

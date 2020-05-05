@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * create by sumerian on 2020/5/1
@@ -13,9 +14,9 @@ import java.util.List;
  * desc:
  **/
 @Mapper
-public interface UserMapper {
+public interface UsersMapper {
 
-   Mapper selectList(@Param("list") List<String> list);
+   List<Map<String, String>>selectList(@Param("list") List<Integer> list);
 
 
 }

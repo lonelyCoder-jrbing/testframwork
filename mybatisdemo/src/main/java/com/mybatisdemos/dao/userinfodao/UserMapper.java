@@ -2,6 +2,7 @@ package com.mybatisdemos.dao.userinfodao;
 
 import com.mybatisdemos.domain.User;
 import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 //注解方式开发持久层接口
@@ -10,6 +11,8 @@ import java.util.List;
  * @blog: https://blog.csdn.net/qq_41744145
  * @description: 基于注解开发的持久层接口
  */
+@Mapper
+@Component
 public interface UserMapper {
     /**
      * 查询所有用户
