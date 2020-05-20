@@ -35,6 +35,7 @@ public class MyNoParalleSource implements SourceFunction<String> {
 
     @Override
     public void cancel() {
+        //当shutdown系统的时候，会调用这个方法。
         //当取消的时候，会将isRunning设置为false
         isRunning = false;
     }

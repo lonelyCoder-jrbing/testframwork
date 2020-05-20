@@ -10,10 +10,6 @@ import org.apache.flink.streaming.api.watermark.Watermark;
 import org.apache.flink.streaming.api.windowing.time.Time;
 
 import javax.annotation.Nullable;
-
-//import org.apache.flink.api.java.tuple.Tuple2;
-//import org.apache.flink.streaming.api.functions.TimestampExtractor;
-
 public class WaterMarkTest01 {
 
     public static void main(String[] args) throws Exception {

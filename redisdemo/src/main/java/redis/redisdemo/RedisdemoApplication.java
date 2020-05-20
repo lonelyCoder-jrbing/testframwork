@@ -8,12 +8,14 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * 用缓存要注意，启动类要加上一个注解开启缓存
  */
 @SpringBootApplication(exclude= DataSourceAutoConfiguration.class)
 @EnableCaching
+@PropertySource(value = {"classpath:"})
 public class RedisdemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(RedisdemoApplication.class, args);

@@ -2,11 +2,13 @@ package redis.redisdemo.config;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Map;
 @Component
 @Data
+@RefreshScope
 public class RedisPoolConfigure {
 
     //Redis服务器IP

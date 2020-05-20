@@ -18,6 +18,11 @@ windows中杀死进程的方式：
 1.tasklist | findstr “xxx”  （xxx为应用程序部分名称）
 
 2.taskkill -PID zzz -F  (zzz为tasklist显示的应用程序pid
+
+
+spring中@value不能导入属性的解决方法：
+  在包含有@value的类中加上@RefreshScop注解。并且在启动类中添加@propertySource注解。
+  将配置文件所在的路径放进去。
    
    
    
