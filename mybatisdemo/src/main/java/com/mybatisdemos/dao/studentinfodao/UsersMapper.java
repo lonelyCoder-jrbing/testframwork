@@ -1,7 +1,7 @@
 package com.mybatisdemos.dao.studentinfodao;
 
-import com.mybatisdemos.domain.IUser;
-import com.mybatisdemos.vo.ResultVo;
+//import com.mybatisdemos.domain.IUser;
+import com.mybatisdemos.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -16,7 +16,9 @@ import java.util.Map;
 @Mapper
 public interface UsersMapper {
 
-   List<Map<String, String>>selectList(@Param("list") List<Integer> list);
+    List<Map<String, String>> selectList(@Param("list") List<Integer> list);
+
+    User selectUser(@Param("id") String id);
 
 
 }
