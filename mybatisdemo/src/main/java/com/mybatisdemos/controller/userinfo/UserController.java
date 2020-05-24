@@ -49,11 +49,14 @@ public class UserController {
         return user;
     }
 
-//    @GetMapping(value = "/receive")
-//    public User receive() {
-//
-//        firstConsumer.handleMessage();
-//        return user;
-//    }
+    @PostMapping(value = "/selectUserById")
+    @ResponseBody
+    public User selectUserById(@RequestBody User user) {
+
+        User user01 = userService.selectUserById(user);
+
+        return user01;
+    }
+
 
 }

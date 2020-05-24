@@ -9,7 +9,9 @@ import java.util.Map;
 public interface UserService {
     public ResultVo getAllUsers();
 
-    List<Map<String, String>> selectByList(List<Integer>list);
+    List<Map<String, String>> selectByList(List<Integer> list);
 
-   User selectByid(String id);
+    User selectByid(String id);
+
+    User selectUserById(User user);
 }

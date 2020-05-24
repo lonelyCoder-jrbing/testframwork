@@ -53,5 +53,11 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
+    @Override
+    public User selectUserById(User user) {
+        User user1 = usersMapper.selectUserById(user);
+        return user1;
+    }
+
 
 }
