@@ -49,6 +49,7 @@ public class UserServiceImpl implements UserService {
         String s = JSON.toJSONString(user);
         String uuid = "01";
         firstSender.send(uuid, s);
+//        firstSender.send2(uuid,s);
         return user;
     }
 

@@ -1,11 +1,10 @@
-package com.mybatisdemos.rabbitconfig;
+package com.es.esdemo.config.rabbitconfig;
 
 
-import com.mybatisdemos.mqcallback.MsgSendConfirmCallBack;
+import com.es.esdemo.config.mqcallback.MsgSendConfirmCallBack;
 import org.springframework.amqp.core.AcknowledgeMode;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;

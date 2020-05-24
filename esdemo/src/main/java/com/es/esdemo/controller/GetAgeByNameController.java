@@ -1,8 +1,10 @@
 package com.es.esdemo.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.es.esdemo.receiver.FirstConsumer;
 import com.es.esdemo.requestTest.pojo.Person;
 import com.es.esdemo.utils.EsScrollUtil;
+import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
@@ -12,20 +14,17 @@ import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("/es")
 public class GetAgeByNameController {
-
-
+    @Autowired
+    private FirstConsumer firstConsumer;
     @Autowired
     RestHighLevelClient clients;
 
@@ -53,6 +52,19 @@ public class GetAgeByNameController {
         }
         return person.getAge();
 
+    }
+
+    @PostMapping("/insertuser")
+    @ResponseBody
+    public void insertIntoEs(@RequestBody Person person) throws IOException {
+        System.out.println("person:   " + person);
+        String uuid = UUID.randomUUID().toString();
+        Map<String, Object> personMap = new HashMap<>();
+        personMap.put("userName", person.getUserName());
+        personMap.put("age", person.getAge());
+        personMap.put("gender", person.getGender());
+        IndexRequest source = new IndexRequest("esdb", "table", uuid).source(personMap);
+        clients.index(source, RequestOptions.DEFAULT);
     }
 
 

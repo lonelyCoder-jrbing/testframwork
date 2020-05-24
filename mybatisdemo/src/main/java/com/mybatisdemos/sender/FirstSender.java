@@ -9,7 +9,8 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
  
 import java.util.UUID;
- 
+import java.util.stream.IntStream;
+
 /**
  * 消息发送  生产者1
  * @author zhuzhe
@@ -31,9 +32,22 @@ public class FirstSender {
      * @param message 消息
      */
     public void send(String uuid, Object message) {
+
+
         CorrelationData correlationId = new CorrelationData(uuid);
         rabbitTemplate.convertAndSend(RabbitMqConfig.EXCHANGE, RabbitMqConfig.ROUTINGKEY2,
                 message, correlationId);
     }
 
+    /**
+     * 发送消息
+     *
+     * @param uuid
+     * @param message 消息
+     */
+    public void send2(String uuid, Object message) {
+        CorrelationData correlationId = new CorrelationData(uuid);
+        rabbitTemplate.convertAndSend(RabbitMqConfig.EXCHANGE, RabbitMqConfig.ROUTINGKEY1,
+                message, correlationId);
+    }
 }

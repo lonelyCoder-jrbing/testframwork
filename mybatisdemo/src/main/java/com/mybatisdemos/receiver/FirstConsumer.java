@@ -14,11 +14,11 @@ import org.springframework.stereotype.Component;
  * @date 2018/5/25 17:32
  * @email 1529949535@qq.com
  */
-@Component
+//@Component
 public class FirstConsumer {
     @Autowired
     private UsersMapper usersMapper;
-    @RabbitListener(queues = {"first-queue","second-queue"}, containerFactory = "rabbitListenerContainerFactory")
+//    @RabbitListener(queues = {"first-queue","second-queue"}, containerFactory = "rabbitListenerContainerFactory")
     public void handleMessage(String message) throws Exception {
         // 处理消息
         System.out.println("FirstConsumer {} handleMessage :"+message);

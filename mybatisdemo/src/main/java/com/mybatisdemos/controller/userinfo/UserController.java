@@ -22,8 +22,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-    @Autowired
-    private FirstConsumer firstConsumer;
+
 
     @RequestMapping(value = "/user")
     public ResultVo getUsers() {
