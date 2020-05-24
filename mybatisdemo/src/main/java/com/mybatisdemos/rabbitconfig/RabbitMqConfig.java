@@ -1,6 +1,8 @@
 package com.mybatisdemos.rabbitconfig;
 
 
+import com.mybatisdemos.mqcallback.MsgSendConfirmCallBack;
+import org.springframework.amqp.core.AcknowledgeMode;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
@@ -71,7 +73,7 @@ public class RabbitMqConfig {
         simpleMessageListenerContainer.setExposeListenerChannel(true);
         simpleMessageListenerContainer.setMaxConcurrentConsumers(5);
         simpleMessageListenerContainer.setConcurrentConsumers(1);
-//        simpleMessageListenerContainer.setAcknowledgeMode(AcknowledgeMode.MANUAL);
+        simpleMessageListenerContainer.setAcknowledgeMode(AcknowledgeMode.MANUAL);
 
         return simpleMessageListenerContainer;
     }
@@ -87,7 +89,7 @@ public class RabbitMqConfig {
          * 必须要配置publisherConfirms或publisherReturns为true
          * 每个rabbitTemplate只能有一个confirm-callback和return-callback
          */
-//        template.setConfirmCallback(msgSendConfirmCallBack());
+        template.setConfirmCallback(msgSendConfirmCallBack());
 //        template.setReturnCallback(msgSendReturnCallback());
         /**
          * 使用return-callback时必须设置mandatory为true，或者在配置中设置mandatory-expression的值为true，
@@ -106,10 +108,10 @@ public class RabbitMqConfig {
      * 在channel为事务时，不可引入确认模式；同样channel为确认模式下，不可使用事务。
      * @return
      */
-//    @Bean
-//    public MsgSendConfirmCallBack msgSendConfirmCallBack(){
-//        return new MsgSendConfirmCallBack();
-//    }
+    @Bean
+    public MsgSendConfirmCallBack msgSendConfirmCallBack(){
+        return new MsgSendConfirmCallBack();
+    }
 
 
 }

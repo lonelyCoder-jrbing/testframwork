@@ -25,6 +25,7 @@ public class FirstConsumer {
 
         User user =(User) JSONUtils.deserializeObject(message, User.class);
         //将拿到的数据插入到es中
+        System.out.println("user:");
 
 
 
