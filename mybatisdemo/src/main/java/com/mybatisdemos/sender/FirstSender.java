@@ -2,20 +2,22 @@ package com.mybatisdemos.sender;
 
 import com.mybatisdemos.rabbitconfig.RabbitMqConfig;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
- 
+
 import java.util.UUID;
 import java.util.stream.IntStream;
 
 /**
  * 消息发送  生产者1
- * @author zhuzhe
- * @date 2018/5/25 14:28
- * @email 1529949535@qq.com
+ *
+ * @author jurongbing
+ * @date 
+ *
  */
 @Slf4j
 @Component
@@ -49,5 +51,14 @@ public class FirstSender {
         CorrelationData correlationId = new CorrelationData(uuid);
         rabbitTemplate.convertAndSend(RabbitMqConfig.EXCHANGE, RabbitMqConfig.ROUTINGKEY1,
                 message, correlationId);
+    }
+
+    /****
+     * 交换器类型为header的交换机没有routing key
+     * @param exchaneName
+     * @param message
+     */
+    public void send(String exchaneName, Message message) {
+        rabbitTemplate.convertAndSend(exchaneName, null, message);
     }
 }
