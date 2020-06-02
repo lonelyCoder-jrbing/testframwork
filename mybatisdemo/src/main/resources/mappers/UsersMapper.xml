@@ -33,12 +33,12 @@
         set patternlock =
         <foreach collection="userList" item="user" index="index"
                  separator=" " open="case id" close="end">
-            when #{user.id} then #{user.patternlock}
+            when #{user.id} then #{user.patternLock}
         </foreach>
         where id in
         <foreach collection="userList" index="index" item="user"
                  separator="," open="(" close=")">
-            #{user.id,jdbcType=BIGINT}
+            #{user.id,jdbcType=int}
         </foreach>
     </update>
 </mapper>
