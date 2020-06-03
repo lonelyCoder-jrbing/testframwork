@@ -59,5 +59,15 @@ public class UserServiceImpl implements UserService {
         return user1;
     }
 
+    @Override
+    public int insertbatch(List<User> userList) {
+        return usersMapper.insertBatch(userList);
+    }
+
+    @Override
+    public int updatebatch(List<User> userList) {
+        return usersMapper.updateBatch(userList);
+    }
+
 
 }

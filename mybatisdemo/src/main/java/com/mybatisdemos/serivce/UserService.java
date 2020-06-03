@@ -14,4 +14,9 @@ public interface UserService {
     User selectByid(String id);
 
     User selectUserById(User user);
+
+    int insertbatch(List<User> userList);
+
+    int updatebatch(List<User> userList);
+
 }

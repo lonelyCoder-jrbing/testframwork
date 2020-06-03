@@ -6,6 +6,7 @@ import com.mybatisdemos.domain.User;
 import com.mybatisdemos.receiver.FirstConsumer;
 import com.mybatisdemos.serivce.UserService;
 import com.mybatisdemos.vo.ResultVo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
@@ -13,10 +14,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @RestController
 @RequestMapping(value = "/try")
 @EnableAutoConfiguration
+@Slf4j
 public class UserController {
 
 
@@ -58,5 +63,36 @@ public class UserController {
         return user01;
     }
 
+    @PostMapping(value = "/insertBatch")
+    @ResponseBody
+    public int insertBatch() {
 
+        List<User> userList = IntStream.range(0,50).mapToObj(i ->
+                User.builder()
+                        .id(i+11)
+                        .password(String.valueOf(new Random(4).nextInt(10000)))
+                        .patternLock("jrbing@001")
+                        .userName("jurongbing" + i)
+                        .build()
+        ).peek(el->log.info("user:  {}",el)).collect(Collectors.toList());
+
+        int i = userService.insertbatch(userList);
+        return i;
+    }
+    @PostMapping(value = "/updateBatch")
+    @ResponseBody
+    public int updateBatch() {
+
+        List<User> userList = IntStream.range(0,50).mapToObj(i ->
+                User.builder()
+                        .id(i+11)
+                        .password(String.valueOf(new Random(4).nextInt(10000)))
+                        .patternLock("byingyue")
+                        .userName("jurongbing" + i)
+                        .build()
+        ).peek(el->log.info("user:  {}",el)).collect(Collectors.toList());
+
+        int i = userService.updatebatch(userList);
+        return i;
+    }
 }
