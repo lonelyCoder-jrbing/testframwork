@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatisdemos.dao.userinfodao.UserLoginPOMapper">
+
+    <resultMap id="BaseResultMap" type="com.mybatisdemos.domain.UserLoginPO">
+        <constructor>
+            <arg column="user_login_id" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="user_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="user_age" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+            <arg column="user_nick_name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="user_code" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="cipher" javaType="java.lang.String" jdbcType="VARCHAR"/>
+            <arg column="login_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        </constructor>
+    </resultMap>
+    <insert id="insert" parameterType="com.mybatisdemos.domain.UserLoginPO">
+    insert into t_user_login (user_login_id, id, user_name, 
+      user_age, user_nick_name, user_code, 
+      cipher)
+    values (#{userLoginId,jdbcType=VARCHAR}, #{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, 
+      #{userAge,jdbcType=INTEGER}, #{userNickName,jdbcType=VARCHAR}, #{userCode,jdbcType=VARCHAR}, 
+      #{cipher,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.mybatisdemos.domain.UserLoginPO">
+        insert into t_user_login
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userLoginId != null">
+                user_login_id,
+            </if>
+            <if test="id != null">
+                id,
+            </if>
+            <if test="userName != null">
+                user_name,
+            </if>
+            <if test="userAge != null">
+                user_age,
+            </if>
+            <if test="userNickName != null">
+                user_nick_name,
+            </if>
+            <if test="userCode != null">
+                user_code,
+            </if>
+            <if test="cipher != null">
+                cipher,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userLoginId != null">
+                #{userLoginId,jdbcType=VARCHAR},
+            </if>
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="userName != null">
+                #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="userAge != null">
+                #{userAge,jdbcType=INTEGER},
+            </if>
+            <if test="userNickName != null">
+                #{userNickName,jdbcType=VARCHAR},
+            </if>
+            <if test="userCode != null">
+                #{userCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cipher != null">
+                #{cipher,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <insert id="insertUserBatch" parameterType="java.util.ArrayList">
+
+        insert into t_user_login
+        (user_login_id, user_name, user_age, user_nick_name,user_code,cipher,login_time)
+        values
+        <foreach collection="userLoginPOS" item="userLoginPO" index="index" separator=",">
+            (
+            #{userLoginPO.userLoginId}, #{userLoginPO.userName},
+            #{userLoginPO.userAge},
+            #{userLoginPO.userNickName},#{userLoginPO.userCode},
+            #{userLoginPO.cipher}, #{userLoginPO.loginTime}
+            )
+        </foreach>
+
+    </insert>
+</mapper>
