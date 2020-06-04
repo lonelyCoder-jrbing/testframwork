@@ -3,6 +3,7 @@ package com.mybatisdemos.controller.userinfo;
 //import com.mybatisdemos.domain.IUser;
 
 import com.mybatisdemos.domain.User;
+import com.mybatisdemos.domain.UserLoginPO;
 import com.mybatisdemos.receiver.FirstConsumer;
 import com.mybatisdemos.serivce.UserService;
 import com.mybatisdemos.vo.ResultVo;
@@ -11,10 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -62,6 +60,29 @@ public class UserController {
 
         return user01;
     }
+
+    @PostMapping(value = "/insertUserBatch")
+    @ResponseBody
+    public int insertUserBatch() {
+
+        List<UserLoginPO> userList = IntStream.range(0,50).mapToObj(i ->
+                UserLoginPO.builder()
+                        .userLoginId(UUID.randomUUID().toString())
+                        .cipher(String.valueOf(new Random(4).nextInt(10000)))
+                        .userCode("jrbing@001")
+                        .userName("jurongbing" + i)
+                        .userNickName("zhibo")
+                        .userAge(20+i)
+                        .loginTime(new Date())
+                        .build()
+        ).peek(el->log.info("user:  {}",el)).collect(Collectors.toList());
+
+        int i = userService.insertUserbatch(userList);
+        return i;
+    }
+
+
+
 
     @PostMapping(value = "/insertBatch")
     @ResponseBody

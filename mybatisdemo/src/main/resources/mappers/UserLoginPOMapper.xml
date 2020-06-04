@@ -75,10 +75,11 @@
     <insert id="insertUserBatch" parameterType="java.util.ArrayList">
 
         insert into t_user_login
-        (user_login_id, user_name, user_age, user_nick_name,user_code,cipher,login_time)
+        (id,user_login_id, user_name, user_age, user_nick_name,user_code,cipher,login_time)
         values
         <foreach collection="userLoginPOS" item="userLoginPO" index="index" separator=",">
             (
+            #{userLoginPO.id},
             #{userLoginPO.userLoginId}, #{userLoginPO.userName},
             #{userLoginPO.userAge},
             #{userLoginPO.userNickName},#{userLoginPO.userCode},

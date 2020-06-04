@@ -1,6 +1,7 @@
 package com.mybatisdemos.serivce;
 
 import com.mybatisdemos.domain.User;
+import com.mybatisdemos.domain.UserLoginPO;
 import com.mybatisdemos.vo.ResultVo;
 
 import java.util.List;
@@ -19,4 +20,5 @@ public interface UserService {
 
     int updatebatch(List<User> userList);
 
+    int insertUserbatch(List<UserLoginPO> userList);
 }

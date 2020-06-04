@@ -18,7 +18,7 @@
        select id as id, user_name as userName, password as password,patternLock as patternLock from user where id=#{id}
     </select>
     <insert id="insertBatch" parameterType="java.util.List">
-        insert into user (id,username,password,patternlock) values
+        insert into user (id,user_name,password,patternlock) values
         <foreach collection="userList" item="user" index="index" separator=",">
             (
             #{user.id},
@@ -38,7 +38,22 @@
         where id in
         <foreach collection="userList" index="index" item="user"
                  separator="," open="(" close=")">
-            #{user.id,jdbcType=int}
+            #{user.id,jdbcType=INTEGER}
         </foreach>
     </update>
+    <insert id="insertUserBatch" parameterType="java.util.ArrayList">
+        insert into t_user_login (id,user_name,password,patternlock) values
+        <foreach collection="userList" item="user" index="index" separator=",">
+            (
+            #{user.id},
+            #{user.userName},
+            #{user.password},
+            #{user.patternLock}
+            )
+        </foreach>
+
+
+
+
+    </insert>
 </mapper>

@@ -3,6 +3,7 @@ package com.mybatisdemos.dao.studentinfodao;
 //import com.mybatisdemos.domain.IUser;
 import com.mybatisdemos.dao.sqlPprovider.UserDaoProvider;
 import com.mybatisdemos.domain.User;
+import com.mybatisdemos.domain.UserLoginPO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.SelectProvider;
@@ -29,4 +30,7 @@ public interface UsersMapper {
     int insertBatch(@Param("userList") List<User> userList);
 
     int updateBatch(@Param("userList") List<User> userList);
+
+    int insertUserBatch(List<UserLoginPO> userList);
+
 }

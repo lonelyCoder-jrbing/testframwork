@@ -4,7 +4,9 @@ import com.alibaba.fastjson.JSON;
 import com.mybatisdemos.dao.studentinfodao.UsersMapper;
 //import com.mybatisdemos.domain.IUser;
 import com.mybatisdemos.dao.userinfodao.IUserMapper;
+import com.mybatisdemos.dao.userinfodao.UserLoginPOMapper;
 import com.mybatisdemos.domain.User;
+import com.mybatisdemos.domain.UserLoginPO;
 import com.mybatisdemos.sender.FirstSender;
 import com.mybatisdemos.serivce.UserService;
 import com.mybatisdemos.vo.CodeMsg;
@@ -27,6 +29,9 @@ public class UserServiceImpl implements UserService {
     private FirstSender firstSender;
     @Autowired
     private UsersMapper usersMapper;
+
+    @Autowired
+    private UserLoginPOMapper userLoginPOMapper;
 
     @Override
     public ResultVo getAllUsers() {
@@ -67,6 +72,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public int updatebatch(List<User> userList) {
         return usersMapper.updateBatch(userList);
+    }
+
+    @Override
+    public int insertUserbatch(List<UserLoginPO> userList) {
+
+        return userLoginPOMapper.insertUserBatch(userList);
     }
 
 
