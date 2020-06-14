@@ -1,0 +1,15 @@
+spring中的事件监听机制：
+1.事件需要继承applicationEvent
+2.事件监听器，需要实现ApplicationListener<E extends ApplicationEvent>
+3.事件发布器。需要实现ApplicationEventPublisherAware，获取spring底层组件ApplicationEventPublisher，并调用其方法发布事件，即"通知"观察者。
+
+
+从是spring源码进行分析该过程：
+1.事件发布器中有一个发布的方法publishEvent，在发布的方法中首先是获取事件广播器，然后进行广播事件。
+2.spring中的事件广播器是什么时候被赋值的呢？在spring容器创建的时候，spring的ioc容器创建的时候需要一个重要的步骤：
+refresh，这个refresh操作中包含了容器的创建，初始化等操作。其中的两个步骤和事件的监听有关系。
+
+ // Initialize event multicaster for this context.
+ initApplicationEventMulticaster();
+   // Check for listener beans and register them.
+ registerListeners();

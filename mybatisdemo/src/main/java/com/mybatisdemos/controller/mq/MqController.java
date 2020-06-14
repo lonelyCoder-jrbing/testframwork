@@ -2,10 +2,14 @@ package com.mybatisdemos.controller.mq;
 
 import com.alibaba.fastjson.JSON;
 import com.mybatisdemos.domain.UserLoginPO;
+import com.mybatisdemos.eventlistener.MqMesgRegisterEvent;
 import com.mybatisdemos.sender.FirstSender;
 import com.mybatisdemos.sender.Person;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.ApplicationEventPublisherAware;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,9 +27,12 @@ import java.util.stream.IntStream;
 @RestController
 @RequestMapping("/rabbitmq")
 @Slf4j
-public class MqController {
+public class MqController  implements ApplicationEventPublisherAware {
     @Autowired
     private FirstSender firstSender;
+
+
+    private ApplicationEventPublisher applicationEventPublisher;
 
     @GetMapping("/send")
     public void send() {
@@ -42,6 +49,7 @@ public class MqController {
                         e.printStackTrace();
                     }
                     firstSender.send(uuid, msg);
+
                 });
     }
 
@@ -68,7 +76,13 @@ public class MqController {
                         e.printStackTrace();
                     }
                     firstSender.send(uuid, msg);
+                    //在此处将同步给mysql的消息发布,在这里是MqController发布的这个事件，所以source就是this代表MqController
+                    applicationEventPublisher.publishEvent(new MqMesgRegisterEvent(this,msg));
                 });
     }
 
+    @Override
+    public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
+           this.applicationEventPublisher = applicationEventPublisher;
+    }
 }
