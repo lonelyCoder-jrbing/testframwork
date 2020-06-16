@@ -10,13 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.LocalVariableTableParameterNameDiscoverer;
 import org.springframework.stereotype.Component;
 import redis.redisdemo.annotation.RedisCache;
-
 import java.lang.reflect.Method;
-
 /**
  * create by sumerian on 2020/6/15
  * <p>
- * desc:
+ * desc:使用Aspectj 的方式进行做缓存切面
  **/
 @Component
 @Aspect
@@ -62,11 +60,7 @@ public class RedisCacheAspect01 {
                 client.getBucket(key).set(obj, redisCache.time(), redisCache.timeunit());
             }
         }
-        //System.out.println("环绕通知后....");
         return obj;
     }
-
-
-
 
 }

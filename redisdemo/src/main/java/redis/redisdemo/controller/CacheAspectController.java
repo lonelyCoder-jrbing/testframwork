@@ -7,21 +7,18 @@ import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import redis.redisdemo.cacheaspect.JsonResult;
 import redis.redisdemo.cacheaspect.SettingBusiness;
 import redis.redisdemo.interfaces.Claims;
 import redis.redisdemo.interfaces.Insurance;
-
 import java.lang.reflect.Method;
 import java.util.List;
 
 /**
  * create by sumerian on 2020/6/15
  * <p>
- * desc:
+ * desc:  redis缓存切面，jdk，cglib动态代理 测试controller
  **/
 
 
@@ -87,8 +84,13 @@ public class CacheAspectController {
         return settingBusinesss.getSettingList("123");
     }
 
+    /***
+     * @RequestParam 不能传递对象，只能传递参数类型
+     * @RequestBody  只能传递对象，不能传递参数类型，否则，会报json解析错误
+     * @param id
+     */
     @GetMapping("cglib2")
-    public void cglibTest2() {
+    public void cglibTest2(@RequestParam Integer id) {
         claims.fixLoss1();
         claims.fixLoss2();
         claims.fixLoss3();
