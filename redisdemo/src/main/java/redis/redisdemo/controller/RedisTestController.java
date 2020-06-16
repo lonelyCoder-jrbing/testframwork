@@ -1,4 +1,4 @@
-package redis.redisdemo.Controller;
+package redis.redisdemo.controller;
 
 import org.redisson.api.*;
 import org.redisson.client.codec.StringCodec;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import redis.redisdemo.CacheTroubleDeal.CachePenetration;
 import redis.redisdemo.pojo.Student;
 
 import java.io.Serializable;
@@ -77,7 +76,7 @@ public class RedisTestController {
 
         //也是键值对，且在键重复的情况之下，会导致覆盖
         BoundHashOperations<String, Object, Object> hash = redisTemplate.boundHashOps("hash");
-        redisCacheTemplate.opsForValue().set("stu", new Student(1, "jurongbing", 12));
+        redisCacheTemplate.opsForValue().set("stu", new Student(1, redisTemplate.opsForValue().get("name"), 12));
         hash.put("username", "jurongbing");
         hash.put("password", "123456");
         hash.put("username", "byy");

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatisdemos.dao.studentinfodao.UsersMapper">
+    <resultMap id="baseResultMap" type="com.mybatisdemos.domain.User">
+        <id column="id" property="id"/>
+        <result column="user_name" property="userName"/>
+        <result column="password" property="password"/>
+        <result column="patternLock" property="patternLock"/>
+    </resultMap>
+    <select id="selectList" parameterType="java.util.List" resultType="java.util.Map">
+        select name ,teacher from course where course_id in
+        <foreach collection="list" open="(" close=")" item="id" separator=",">
+            #{id}
+        </foreach>
+    </select>
+
+    <select id="selectUser" resultMap="baseResultMap">
+       select id as id, user_name as userName, password as password,patternLock as patternLock from user where id=#{id}
+    </select>
+    <insert id="insertBatch" parameterType="java.util.List">
+        insert into user (id,user_name,password,patternlock) values
+        <foreach collection="userList" item="user" index="index" separator=",">
+            (
+            #{user.id},
+            #{user.userName},
+            #{user.password},
+            #{user.patternLock}
+            )
+        </foreach>
+    </insert>
+    <update id="updateBatch" parameterType="java.util.List">
+        update user
+        set patternlock =
+        <foreach collection="userList" item="user" index="index"
+                 separator=" " open="case id" close="end">
+            when #{user.id} then #{user.patternLock}
+        </foreach>
+        where id in
+        <foreach collection="userList" index="index" item="user"
+                 separator="," open="(" close=")">
+            #{user.id,jdbcType=INTEGER}
+        </foreach>
+    </update>
+    <insert id="insertUserBatch" parameterType="java.util.ArrayList">
+        insert into t_user_login (id,user_name,password,patternlock) values
+        <foreach collection="userList" item="user" index="index" separator=",">
+            (
+            #{user.id},
+            #{user.userName},
+            #{user.password},
+            #{user.patternLock}
+            )
+        </foreach>
+
+
+
+
+    </insert>
+</mapper>

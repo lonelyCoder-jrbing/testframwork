@@ -1,4 +1,4 @@
-package redis.redisdemo.Controller;
+package redis.redisdemo.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -8,7 +8,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import redis.redisdemo.CacheTroubleDeal.CachePenetration;
+import redis.redisdemo.cachetroubledeal.CachePenetration;
 import redis.redisdemo.pojo.User;
 import redis.redisdemo.service.UserService;
 

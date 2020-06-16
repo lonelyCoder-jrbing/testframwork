@@ -1,0 +1,5 @@
+redis中的缓存切面只有RedisCacheAspect01生效，目前RedisCacheAspect中使用  spel表达式生成的切面不可用。
+
+redis的缓存切面也可以通过jdk或者cglib的动态代理来实现
+但是jdk的动态代理和cglib的动态代理功能上是有所区别的。
+jdk的动态代理不能代理没有实现接口的类，cglib可以做到这一点。
