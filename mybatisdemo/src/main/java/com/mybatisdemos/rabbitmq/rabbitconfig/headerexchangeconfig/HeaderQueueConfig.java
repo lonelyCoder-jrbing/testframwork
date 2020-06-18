@@ -1,4 +1,4 @@
-package com.mybatisdemos.rabbitconfig.headerexchangeconfig;
+package com.mybatisdemos.rabbitmq.rabbitconfig.headerexchangeconfig;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

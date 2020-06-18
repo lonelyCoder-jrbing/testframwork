@@ -105,3 +105,18 @@
 
     1.springboot的starter机制需要仔细了解一下
     2.environmentPostProcessor了解使用
+
+
+
+    java8中的流到底时什么？
+    懒加载的好处
+
+    service层传输大文件，使用了哪些api？
+
+    用了什么消息队列传送消息.
+
+    是否会出现消息丢失的现象?
+
+
+
+

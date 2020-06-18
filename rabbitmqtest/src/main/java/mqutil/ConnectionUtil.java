@@ -18,6 +18,7 @@ public class ConnectionUtil {
 		  factory.setUsername("guest");
 		  factory.setPassword("guest");
 		  factory.setPort(5672);
+//		  factory.set
 		  /*
 		   * 获取到mq连接
 		   */

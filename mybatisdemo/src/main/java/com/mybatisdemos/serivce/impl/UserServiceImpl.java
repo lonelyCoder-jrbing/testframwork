@@ -7,11 +7,10 @@ import com.mybatisdemos.dao.userinfodao.IUserMapper;
 import com.mybatisdemos.dao.userinfodao.UserLoginPOMapper;
 import com.mybatisdemos.domain.User;
 import com.mybatisdemos.domain.UserLoginPO;
-import com.mybatisdemos.sender.FirstSender;
+import com.mybatisdemos.rabbitmq.sender.FirstSender;
 import com.mybatisdemos.serivce.UserService;
 import com.mybatisdemos.vo.CodeMsg;
 import com.mybatisdemos.vo.ResultVo;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

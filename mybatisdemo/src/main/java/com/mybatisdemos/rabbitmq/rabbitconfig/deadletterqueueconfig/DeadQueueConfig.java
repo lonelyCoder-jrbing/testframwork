@@ -1,4 +1,4 @@
-package com.mybatisdemos.rabbitconfig.deadletterqueueconfig;
+package com.mybatisdemos.rabbitmq.rabbitconfig.deadletterqueueconfig;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.DirectExchange;

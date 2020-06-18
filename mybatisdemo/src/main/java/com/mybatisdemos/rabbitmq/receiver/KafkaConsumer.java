@@ -1,8 +1,7 @@
-package com.mybatisdemos.receiver;
+package com.mybatisdemos.rabbitmq.receiver;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.stereotype.Component;
 
 /**
  * create by sumerian on 2020/6/7

@@ -1,11 +1,10 @@
-package com.mybatisdemos.rabbitconfig;
+package com.mybatisdemos.rabbitmq.rabbitconfig;
 
 
-import com.mybatisdemos.mqcallback.MsgSendConfirmCallBack;
+import com.mybatisdemos.rabbitmq.mqcallback.MsgSendConfirmCallBack;
 import org.springframework.amqp.core.AcknowledgeMode;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
@@ -36,12 +35,12 @@ public class RabbitMqConfig {
      */
     public static final String ROUTINGKEY2 = "queue_one_key2";
 
-    @Autowired
+    @Autowired(required = false)
     private QueueConfig queueConfig;
-    @Autowired
+    @Autowired(required = false)
     private ExchangeConfig exchangeConfig;
 
-    @Autowired
+    @Autowired(required = false)
     private ConnectionFactory connectionFactory;
 
 
@@ -113,6 +112,4 @@ public class RabbitMqConfig {
     public MsgSendConfirmCallBack msgSendConfirmCallBack(){
         return new MsgSendConfirmCallBack();
     }
-
-
 }

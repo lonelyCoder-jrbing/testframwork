@@ -1,7 +1,6 @@
-package com.mybatisdemos.receiver;
+package com.mybatisdemos.rabbitmq.receiver;
 
 import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.impl.AMQImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;

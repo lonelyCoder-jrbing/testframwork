@@ -1,6 +1,6 @@
 package com.mybatisdemos.controller.mq;
 
-import com.mybatisdemos.sender.FirstSender;
+import com.mybatisdemos.rabbitmq.sender.FirstSender;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageDeliveryMode;

@@ -1,6 +1,6 @@
-package com.mybatisdemos.sender;
+package com.mybatisdemos.rabbitmq.sender;
 
-import com.mybatisdemos.rabbitconfig.RabbitMqConfig;
+import com.mybatisdemos.rabbitmq.rabbitconfig.RabbitMqConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.connection.CorrelationData;

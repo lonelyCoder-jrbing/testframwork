@@ -1,4 +1,4 @@
-package com.mybatisdemos.mqcallback;
+package com.mybatisdemos.rabbitmq.mqcallback;
 
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

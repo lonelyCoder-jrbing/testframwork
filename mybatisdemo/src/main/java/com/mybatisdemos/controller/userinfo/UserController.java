@@ -4,7 +4,7 @@ package com.mybatisdemos.controller.userinfo;
 
 import com.mybatisdemos.domain.User;
 import com.mybatisdemos.domain.UserLoginPO;
-import com.mybatisdemos.receiver.FirstConsumer;
+import com.mybatisdemos.rabbitmq.receiver.FirstConsumer;
 import com.mybatisdemos.serivce.UserService;
 import com.mybatisdemos.vo.ResultVo;
 import lombok.extern.slf4j.Slf4j;

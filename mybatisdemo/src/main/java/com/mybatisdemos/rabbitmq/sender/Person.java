@@ -1,4 +1,4 @@
-package com.mybatisdemos.sender;
+package com.mybatisdemos.rabbitmq.sender;
 
 public class Person {
     private String userName;
