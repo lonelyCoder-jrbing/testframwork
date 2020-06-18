@@ -17,11 +17,5 @@ public class RuntimeConstantOOM {
 
               list.add(String.valueOf(i++).intern());
           }
-
-
-
-
     }
-
-
 }

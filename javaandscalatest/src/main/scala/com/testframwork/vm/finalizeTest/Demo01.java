@@ -6,6 +6,8 @@ public class Demo01 {
         Demo01 demo01 = new Demo01();
         demo01 = null;
         System.gc();
+        //在线程sleep 500ms的时候，才会执行finalize方法，可以说明finalize方法的优先级很低。
+        Thread.sleep(500L);
         //当我们手动请求gc的时候会调用finalize方法.
         //一般是用于释放非java资源,(如打开的文件资源,数据库资源等),或是调用非java方法时候分配的内存
     }

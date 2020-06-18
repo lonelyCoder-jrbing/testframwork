@@ -9,8 +9,10 @@ import java.util.concurrent.*;
  * 目的：达到所有线程并行执行的目的
  */
 public class CountDownLatchTest {
+    //线程的数量
+    private static  final int initializeValue = 2;
 
-    private static CountDownLatch latch = new CountDownLatch(1);
+    private static CountDownLatch latch = new CountDownLatch(initializeValue);
 
     public static void main(String[] args) throws InterruptedException{
         System.out.println("主线程开始......");
@@ -42,9 +44,13 @@ public class CountDownLatchTest {
         threadPoolExecutor.execute(thread1);
         threadPoolExecutor.execute(thread2);
         threadPoolExecutor.shutdown();
+
+        //阻塞所有的线程，每执行一个线程，计数器的值减去一，await方法的作用是阻塞当前线程，
+        //直到所有的线程都执行完成，
         latch.await();
         long endTime = System.currentTimeMillis();
-        System.out.printf("used time "+(endTime-startAt));
+        System.out.println("endTime:  "+endTime);
+        System.out.println("used time "+(endTime-startAt));
         System.out.println("atest[0]:  "+atest[0]);
         System.out.printf("used time " + (endTime - startAt));
         System.out.printf("主线程等待。。。");

@@ -18,6 +18,11 @@ import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 
+/**
+ *
+ * 使用aspectj的方式对 加注解的方法进行拦截
+ *
+ */
 @Aspect // 申明这是一个切面
 @Component // 使其被Spring扫描管理,是采用了aop的方式，其最终还是由spring统一管理bean的。
 @Slf4j

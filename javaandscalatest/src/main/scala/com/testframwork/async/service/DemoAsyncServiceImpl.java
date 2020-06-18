@@ -11,7 +11,8 @@ import org.springframework.stereotype.Service;
 public class DemoAsyncServiceImpl implements DemoAsyncService {
 
     public static Random random = new Random();
-
+    //这里的异步方法调用是指调用之后，不用管是否返回结果，直接进行下步操作
+    //像mq消息的发送这种操作，以及不影响返回结果的操作，可以异步执行。
     @Async
     @Override
     public Future<String> doTaskOne() throws Exception {
