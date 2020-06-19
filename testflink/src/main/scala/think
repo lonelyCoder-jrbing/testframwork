@@ -7,13 +7,15 @@ kafka相关命令：
 2. 进入kafka安装目录
   .\bin\windows\kafka-server-start.bat .\config\server.properties
 
-3.创建生产者
+3.创建topic
   cd D:\Tool\kafka_2.11-2.1.1\bin\windows
-  kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic topicname
+  kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic hello
+4.创建生产者
+  kafka-console-producer.bat --broker-list localhost:9092 --topic hello
 
 4.创建消费者
   cd D:\Tool\kafka_2.11-2.1.1\bin\windows
-  kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic topicname--from-beginning
+  kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic hello -- from-beginning
 
 5.查看消费者列表
   kafka-topics.bat --list --zookeeper localhost:2181
