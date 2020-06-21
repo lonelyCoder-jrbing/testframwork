@@ -28,10 +28,10 @@ public class Ap {
                 System.out.println("beanname:     "+beanName);
             }
 
-            String[] beanNamesForType = ctx.getBeanNamesForType(Ap.class);
-            for(String e:beanNamesForType){
-                System.out.println("beanNamesForType------------:"+e);
-            }
+//            String[] beanNamesForType = ctx.getBeanNamesForType(Ap.class);
+//            for(String e:beanNamesForType){
+//                System.out.println("beanNamesForType------------:"+e);
+//            }
         };
     }
 

@@ -1,0 +1,2 @@
+org.springframework.context.ApplicationContextInitializer=com.springdemo.applicationcontextInitializertest.ApplicationContextInitializer1
+org.springframework.boot.env.EnvironmentPostProcessor=com.springdemo.environmentpostprocessortest.MyEnvironmentPostProcessor
