@@ -1,4 +1,4 @@
-package com.springdemo.beanpostprocessorTest.configerations;
+package com.springdemo.beanpostprocessorTest.configurations;
 
 
 import com.springdemo.beanpostprocessorTest.service.CalculateService;

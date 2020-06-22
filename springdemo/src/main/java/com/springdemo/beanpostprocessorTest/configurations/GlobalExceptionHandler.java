@@ -1,4 +1,4 @@
-package com.springdemo.beanpostprocessorTest.configerations;
+package com.springdemo.beanpostprocessorTest.configurations;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -22,7 +22,9 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Throwable.class)
     public Object handlerException(HttpServletRequest request, HttpServletResponse response, Throwable throwable) {
         //可以对url进行检查
+        log.info("request.getRequestURI==={}",request.getRequestURI());
         if (request.getRequestURI().contains("/com")) {
+            log.info("com.......");
             response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
         }
         return null;

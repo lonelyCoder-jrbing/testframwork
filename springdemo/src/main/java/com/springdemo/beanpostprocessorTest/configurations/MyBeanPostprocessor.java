@@ -1,8 +1,7 @@
-package com.springdemo.beanpostprocessorTest.configerations;
+package com.springdemo.beanpostprocessorTest.configurations;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.beans.factory.support.SimpleInstantiationStrategy;
 import org.springframework.stereotype.Component;
 
 import java.util.stream.IntStream;
@@ -25,10 +24,10 @@ public class MyBeanPostprocessor implements BeanPostProcessor {
     }
 
     public void dosomthing() {
-        IntStream.range(0, 10).mapToObj(i -> new Thread(() -> System.out.println("mmm"), String.valueOf(i))).forEach(t -> {
-            System.out.println("thread name:  " + t.getName());
-            t.start();
-        });
+//        IntStream.range(0, 10).mapToObj(i -> new Thread(() -> System.out.println("mmm"), String.valueOf(i))).forEach(t -> {
+//            System.out.println("thread name:  " + t.getName());
+//            t.start();
+//        });
     }
 
 }

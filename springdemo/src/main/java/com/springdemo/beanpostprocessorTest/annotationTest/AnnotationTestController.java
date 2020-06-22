@@ -18,13 +18,14 @@ import java.lang.reflect.Method;
  */
 @RestController
 @RequestMapping("/hello")
-public class AnnotationTestController {
+public class    AnnotationTestController {
 
     @Intercept(value = BusinessConstant.LOGIN_MANAGER_SESSION_KEY)
     @GetMapping("/get")
     public String get() throws ClassNotFoundException, NoSuchMethodException {
-        Class<?> aClass = Class.forName("com.org.spring.ioctest.beanpostprocessorTest.annotationTest.AnnotationTestController");
-        Method get = aClass.getDeclaredMethod("get");
+        System.out.println(".........llll.........");
+        Class<?> aClass = Class.forName("com.springdemo.beanpostprocessorTest.annotationTest.AnnotationTestController");
+        Method get = aClass.getMethod("get");
         Intercept annotation = get.getAnnotation(Intercept.class);
         String value = annotation.value();
         System.out.println(value);

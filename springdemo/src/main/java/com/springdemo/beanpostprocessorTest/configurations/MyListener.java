@@ -1,4 +1,4 @@
-package com.springdemo.beanpostprocessorTest.configerations;
+package com.springdemo.beanpostprocessorTest.configurations;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;

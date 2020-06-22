@@ -25,16 +25,18 @@ public class HelloController {
     }
 
     @Bean
-    public void getWordCountFromLogFile() {
+    public  Map<String, Integer> getWordCountFromLogFile() {
         System.out.println("read word method has been called here ");
         Map<String, Integer> wordCountFromLogFile = null;
 
         try {
             wordCountFromLogFile = calculateService.getWordCountFromLogFile();
             wordcountMap.putAll(wordCountFromLogFile);
+            return wordCountFromLogFile;
         } catch (Exception e) {
             System.out.println("read data from log file error");
         }
+        return null;
     }
 
 
