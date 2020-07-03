@@ -52,8 +52,16 @@
             )
         </foreach>
 
+    </insert>
 
+    <insert id="insertUser" parameterType="com.mybatisdemos.domain.User">
 
-
+        insert into user (id,user_name,password,patternlock)
+         values
+         (#{user.id},
+         #{user.userName},
+         #{user.password},
+         #{user.patternLock}
+         );
     </insert>
 </mapper>

@@ -12,6 +12,8 @@ import redis.redisdemo.cacheaspect.JsonResult;
 import redis.redisdemo.cacheaspect.SettingBusiness;
 import redis.redisdemo.interfaces.Claims;
 import redis.redisdemo.interfaces.Insurance;
+import redis.redisdemo.proxy.BusinessProxy;
+
 import java.lang.reflect.Method;
 import java.util.List;
 
@@ -38,7 +40,6 @@ public class CacheAspectController {
     @Autowired
     private Insurance insurance;
 
-
     /***
      * 使用缓存切面
      * @return
@@ -53,16 +54,23 @@ public class CacheAspectController {
      * @return
      */
     @GetMapping("/verify")
-    public List<JsonResult> verify() {
+    public String verify() {
         String valueGetFromRedis = redisTemplate.opsForValue().get("SettingBusiness_getSettingList_124");
         log.info("valueGetFromRedis:    {}", valueGetFromRedis);
-        JsonResult jsonResult = JSON.parseObject(valueGetFromRedis, JsonResult.class);
-        log.info("jsonResult:   {}", jsonResult);
-        return null;
+//        JsonResult jsonResult = JSON.parseObject(valueGetFromRedis, JsonResult.class);
+//        log.info("jsonResult:   {}", jsonResult);
+        return valueGetFromRedis;
     }
-
     /***
-     *使用cglib方式代理redis的缓存切面
+     * cglib代理方法的使用
+     * @return
+     */
+    @GetMapping("/proxy")
+    public List<JsonResult> getValueFromRedis2() {
+        return settingBusiness.getSettingList2("1212");
+    }
+    /***
+     *使用cglib方式代理
      */
     @GetMapping("/cglib")
     public List<JsonResult> cglibTest() {
@@ -87,10 +95,10 @@ public class CacheAspectController {
     /***
      * @RequestParam 不能传递对象，只能传递参数类型
      * @RequestBody  只能传递对象，不能传递参数类型，否则，会报json解析错误
-     * @param id
+     * @param
      */
     @GetMapping("cglib2")
-    public void cglibTest2(@RequestParam Integer id) {
+    public void cglibTest2() {
         claims.fixLoss1();
         claims.fixLoss2();
         claims.fixLoss3();

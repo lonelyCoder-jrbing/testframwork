@@ -3,6 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisClusterConfiguration;
@@ -21,6 +22,7 @@ import java.util.stream.Collectors;
 
 @Configuration
 @AutoConfigureAfter(RedisAutoConfiguration.class)
+@EnableCaching
 public class RedisConfiguration {
     @Autowired
     private RedisPoolConfigure redisPoolConfigure;

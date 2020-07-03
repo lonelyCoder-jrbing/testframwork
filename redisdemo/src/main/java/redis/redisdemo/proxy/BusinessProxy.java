@@ -6,6 +6,7 @@ import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import redis.redisdemo.cacheaspect.JsonResult;
 import redis.redisdemo.cacheaspect.SettingBusiness;
 
@@ -22,6 +23,7 @@ import java.lang.reflect.Method;
 public class BusinessProxy {
 
     @Bean
+    @Order(1)
     public SettingBusiness getInsance() {
         log.info("proxy.....start.....");
         final SettingBusiness settingBusiness = new SettingBusiness();

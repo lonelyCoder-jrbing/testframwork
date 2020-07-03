@@ -30,6 +30,7 @@ public class KafkaReceiver {
             //该条消息就不会被重复消费。这里也就是值的是手动提交偏移量。
             //但是要在配置文件中将enable-auto-commit设值为false
             ack.acknowledge();
+
         }
     }
 }

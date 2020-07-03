@@ -2,7 +2,8 @@ package redis.redisdemo.cacheaspect;
 
 import com.google.common.collect.ImmutableMap;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Service;
 import redis.redisdemo.annotation.RedisCache;
 import redis.redisdemo.annotation.RedisCachetAttribute;
 
@@ -12,38 +13,24 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
- * SettingBusiness.
- */
-//@Component
+ * create by sumerian on 2020/6/15
+ * <p>
+ * desc:  redis缓存切面使用示例
+ **/
+@Service
 @Slf4j
+@Order(4)
 public class SettingBusiness {
 
-    @RedisCachetAttribute(key = "T(com.g2.order.server.vo.CommonConst)" +
-            ".SETTING_JSON_KEY" +
-            " + #code"
-            , expireSeconds = 30
-    )
-    public JsonResult getSetting(String code) {
-        return new JsonResult("234");
-    }
-
-    //    @RedisCachetAttribute(key = "T(com.g2.order.server.vo.CommonConst)" +
-//            ".SETTING_LIST_KEY" +
-//            " + #code"
-//            , expireSeconds = 30
-//    )
-//    @RedisCache(time = 10, timeunit = TimeUnit.DAYS)
+    @RedisCache(time = 10, timeunit = TimeUnit.DAYS)
     public List<JsonResult> getSettingList(String code) {
            log.info("i am come in.....");
         return Arrays.<JsonResult>asList(new JsonResult("234"), new JsonResult("345"));
     }
 
-    @RedisCachetAttribute(key = "T(com.g2.order.server.vo.CommonConst)" +
-            ".SETTING_MAP_KEY" +
-            " + #code"
-            , expireSeconds = 30
-    )
-    public Map<String, JsonResult> getSettingMap(String code) {
-        return ImmutableMap.of(code, new JsonResult("234"), "abc", new JsonResult("abc234"));
+    public List<JsonResult> getSettingList2(String code) {
+        log.info("i am come in.....");
+        return Arrays.<JsonResult>asList(new JsonResult("123"), new JsonResult("567"));
     }
+
 }

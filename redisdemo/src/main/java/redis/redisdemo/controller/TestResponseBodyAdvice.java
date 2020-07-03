@@ -1,5 +1,6 @@
 package redis.redisdemo.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.server.ServerHttpRequest;
@@ -13,6 +14,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
  * desc:  对controller方法层进行拦截
  **/
 @ControllerAdvice
+@Slf4j
 public class TestResponseBodyAdvice  implements ResponseBodyAdvice {
     @Override
     public boolean supports(MethodParameter returnType, Class converterType) {
@@ -31,7 +33,7 @@ public class TestResponseBodyAdvice  implements ResponseBodyAdvice {
      */
     @Override
     public Object beforeBodyWrite(Object o, MethodParameter methodParameter, MediaType selectedContentType, Class selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
-        System.out.println("TestResponseBodyAdvice==>beforeBodyWrite:"  + ",selectedContentType:   "+selectedContentType +"methodParameter:   "+methodParameter+"  request:"+request+"   response:"+response);
+        log.info("TestResponseBodyAdvice==>beforeBodyWrite:"  + ",selectedContentType:   "+selectedContentType +"methodParameter:   "+methodParameter+"  request:"+request.toString()+"   response:"+response.toString());
         //对 o 进行脱敏，并且返回。
         return o;
     }

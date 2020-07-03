@@ -61,12 +61,14 @@ public class SqlExecuteTimeCountInterceptor implements Interceptor {
             BoundSql boundSql = statementHandler.getBoundSql();
             String sql = boundSql.getSql();
             Object parameterObject = boundSql.getParameterObject();
+
             List<ParameterMapping> parameterMappingList = boundSql.getParameterMappings();
 
             // 格式化Sql语句，去除换行符，替换参数
-//            sql = formatSQL(sql, parameterObject, parameterMappingList);
+            sql = formatSQL(sql, parameterObject, parameterMappingList);
 
             logger.info("执行 SQL：[ , {} ]执行耗时[ {} ms]", sql, timeCount);
+            logger.info("parameterObject=={}",parameterObject);
         }
     }
 

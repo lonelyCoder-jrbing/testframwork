@@ -13,6 +13,7 @@ import com.mybatisdemos.vo.CodeMsg;
 import com.mybatisdemos.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.interceptor.TransactionInterceptor;
 
 import java.util.List;
 import java.util.Map;
@@ -77,6 +78,13 @@ public class UserServiceImpl implements UserService {
     public int insertUserbatch(List<UserLoginPO> userList) {
 
         return userLoginPOMapper.insertUserBatch(userList);
+    }
+
+    @Override
+    public int insertUser(User user) {
+        int i1 = usersMapper.insertUser(user);
+        int i =  1/0;
+        return i1;
     }
 
 

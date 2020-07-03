@@ -21,4 +21,6 @@ public interface UserService {
     int updatebatch(List<User> userList);
 
     int insertUserbatch(List<UserLoginPO> userList);
+
+    int insertUser(User user);
 }

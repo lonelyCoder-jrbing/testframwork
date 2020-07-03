@@ -60,6 +60,13 @@ public class UserController {
 
         return user01;
     }
+    @PostMapping(value = "/insertUser")
+    @ResponseBody
+    public int insertUser(@RequestBody User user){
+
+         return userService.insertUser(user);
+
+    }
 
     @PostMapping(value = "/insertUserBatch")
     @ResponseBody

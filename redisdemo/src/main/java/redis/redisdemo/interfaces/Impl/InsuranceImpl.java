@@ -1,6 +1,7 @@
 package redis.redisdemo.interfaces.Impl;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 import redis.redisdemo.interfaces.Insurance;
 
 /**
@@ -9,6 +10,7 @@ import redis.redisdemo.interfaces.Insurance;
  * desc:
  **/
 @Slf4j
+//@Service
 public class InsuranceImpl implements Insurance {
     @Override
     public void buy1() {

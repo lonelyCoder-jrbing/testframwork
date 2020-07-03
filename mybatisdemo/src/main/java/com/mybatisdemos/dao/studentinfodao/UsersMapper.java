@@ -33,4 +33,5 @@ public interface UsersMapper {
 
     int insertUserBatch(List<UserLoginPO> userList);
 
+    int insertUser(@Param("user")User user);
 }
