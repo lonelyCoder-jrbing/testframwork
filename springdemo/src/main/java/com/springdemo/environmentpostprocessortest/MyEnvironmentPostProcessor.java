@@ -1,5 +1,6 @@
 package com.springdemo.environmentpostprocessortest;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.env.EnvironmentPostProcessor;
 import org.springframework.core.env.ConfigurableEnvironment;
@@ -18,6 +19,7 @@ import java.util.Properties;
  * desc:允许定制应用的上下文的应用环境优于应用的上下文之前被刷新
  **/
 @Component
+@Slf4j
 public class MyEnvironmentPostProcessor implements EnvironmentPostProcessor {
     @Override
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
@@ -29,9 +31,9 @@ public class MyEnvironmentPostProcessor implements EnvironmentPostProcessor {
             PropertiesPropertySource propertiesPropertySource = new PropertiesPropertySource("my",properties);
             environment.getPropertySources().addLast(propertiesPropertySource);
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            log.info("FileNotFoundException...={}",e);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.info("IOException.............={}",e);
         }
     }
 }

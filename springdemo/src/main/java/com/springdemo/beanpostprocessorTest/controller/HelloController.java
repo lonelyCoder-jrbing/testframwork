@@ -42,6 +42,7 @@ public class HelloController {
 
     @GetMapping("/getWordPair/{word}")
     public String getWordPair(@PathVariable String word) {
+        System.out.println("getWordPair..........");
         Integer integer = wordcountMap.get(word);
         return word +"   "+ String.valueOf(integer);
     }

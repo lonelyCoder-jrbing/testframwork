@@ -14,5 +14,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Person04 {
     private String name="jurongbing04";
-    private int age;
+    private int age=100;
 }

@@ -14,6 +14,7 @@ public class ApplicationContextInitializer1 implements ApplicationContextInitial
         // 打印容器里面有多少个bean
         System.out.println("bean count=====" + applicationContext.getBeanDefinitionCount());
 //        applicationContext.
+
         // 打印人所有 beanName
         System.out.println(applicationContext.getBeanDefinitionCount() + "个Bean的名字如下：");
         String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();

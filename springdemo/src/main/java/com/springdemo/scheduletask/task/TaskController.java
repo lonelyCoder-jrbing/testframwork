@@ -1,5 +1,6 @@
 package com.springdemo.scheduletask.task;
 
+import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -16,12 +17,13 @@ public class TaskController {
     private MonitorFacade facade;
 
     @GetMapping(value = "/demo/request")
-//  @Scheduled(cron = "0 0 1 * * ?")    //每天凌晨1点执行
+//    @Scheduled(cron = "0 0 1 * * ?")    //每天凌晨1点执行
     @Scheduled(fixedRate = 5000)
     public void leadOthers() {
         facade.makeMoney();
         facade.wakeup();
         facade.sleep();
+
     }
 
 

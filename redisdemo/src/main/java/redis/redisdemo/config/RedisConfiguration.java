@@ -6,7 +6,9 @@ import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisClusterConfiguration;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.RedisNode;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
@@ -15,6 +17,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import redis.clients.jedis.JedisPoolConfig;
+import redis.clients.jedis.JedisShardInfo;
 //import redis.clients.jedis.JedisPoolConfig;
 import java.io.Serializable;
 import java.util.List;
@@ -44,6 +47,17 @@ public class RedisConfiguration {
         jedisPoolConfig.setMaxWaitMillis(Integer.valueOf(redisPoolConfigure.getMAX_WAIT()));
         return jedisPoolConfig;
     }
+
+//    /**
+//     * @description 创建redis连接工厂
+//     */
+//    public RedisConnectionFactory getConnectionFactory() {
+//        System.out.println("host:" + redisPoolConfigure.getADDR());
+//        System.out.println("port:" + redisPoolConfigure.getPORT());
+//        RedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory(
+//                new JedisShardInfo(redisPoolConfigure.getADDR().get(0), redisPoolConfigure.getPORT()));
+//        return jedisConnectionFactory;
+//    }
     @Bean
     public LettuceConnectionFactory lettuceConnectionFactory() {
         LettuceConnectionFactory lettuceConnectionFactory = new LettuceConnectionFactory();
@@ -53,6 +67,18 @@ public class RedisConfiguration {
         lettuceConnectionFactory.setShareNativeConnection(Boolean.FALSE);
         return lettuceConnectionFactory;
     }
+//    /**
+//     * @description 设置缓存管理器
+//     */
+//    @Bean(name = "cacheManager")
+//    public RedisCacheManager getRedisCacheManager() {
+//        LettuceConnectionFactory lettuceConnectionFactory = lettuceConnectionFactory();
+//
+//        RedisCacheManager redisCacheManager = new RedisCacheManager(redisCacheTemplate(lettuceConnectionFactory));
+//        return redisCacheManager;
+//    }
+
+
     @Bean
     public StringRedisTemplate stringRedisTemplate(@Qualifier("lettuceConnectionFactory") LettuceConnectionFactory connectionFactory) {
         StringRedisTemplate stringRedisTemplate = new StringRedisTemplate();

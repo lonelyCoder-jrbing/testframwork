@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 /**
  * create by sumerian on 2020/6/18
  * <p>
- * desc:拦截待遇service注解的类中的方法
+ * desc:拦截带有service注解的类中的方法
  **/
 
 @Aspect

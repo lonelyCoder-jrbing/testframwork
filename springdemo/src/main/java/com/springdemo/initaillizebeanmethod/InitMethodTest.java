@@ -2,6 +2,7 @@ package com.springdemo.initaillizebeanmethod;
 
 import lombok.Data;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Component;
  * desc:
  * 指定组建的init方法和destroy的几种方法
  * 1：在配置类中 @Bean(initMethod = "init",destroyMethod = "destory")注解指定
- * 2：实现InitializingBean接口重写其afterPropertiesSet方法，实现DisposableBean接口重写destroy方法
+ * 2：实现InitializingBean接口重写其afterPropertiesSet方法，实现DisposableBean接口重写destroy方法(是在容器关闭的时候调用的)
  * 3：利用java的JSR250规范中的@PostConstruct标注在init方法上，@PreDestroy标注在destroy注解上
  **/
 @Component
@@ -44,8 +45,11 @@ public class InitMethodTest {
         }
 
     }
-
+    @Configuration
     private class Config {
+
+        public Config() {
+        }
 
         @Bean(initMethod = "init", destroyMethod = "destory")
         public Car car() {
