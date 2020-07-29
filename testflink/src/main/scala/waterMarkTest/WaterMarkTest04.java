@@ -39,8 +39,8 @@ public class WaterMarkTest04 {
 
                     // 打印产生的消息
                     long w = showWindowsStart(next.f1, 0L, 7000L);
-                    System.out.println(next + " -> " + converseStringFromDate(new Date(next.f1)) + " -> 所属的窗口起始点是：" + converseStringFromDate
-                            (new Date(w)));
+                    System.out.println(next + " -> " + converseStringFromDate(new Date(next.f1))
+                            + " -> 所属的窗口起始点是：" + converseStringFromDate(new Date(w)));
                     // event-time 设置为消息本身时间
                     ctx.collectWithTimestamp(next, next.f1);
                     // 消息时间 + Lateness

@@ -77,7 +77,7 @@ public class HighLevelTest {
 
         String id = UUID.randomUUID().toString();
         Map<String, Object> addMap = new HashMap<>();
-        addMap.put("userName", "boyingyue");
+        addMap.put("userName", "boyingyue0710");
         addMap.put("age", 34);
         addMap.put("gender", "w");
         IndexRequest source = new IndexRequest("esdb", "table", id).source(addMap);

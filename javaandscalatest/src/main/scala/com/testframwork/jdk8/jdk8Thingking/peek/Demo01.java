@@ -6,9 +6,8 @@ public class Demo01 {
 
     public static void main(String[] args) {
 
-        Arrays.asList("a", "b", "c").stream()
-
-
+        Arrays.asList("a", "b", "c")
+                .stream()
                 .map(w -> w + " ")
                 .peek(System.out::println)
                 .map(String::toUpperCase)

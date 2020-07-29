@@ -36,6 +36,10 @@ public class TopNApp {
                 //统计的是过去的一小时之内的热销图书，所以窗口的大小设置为一小时，每5秒钟做一次聚合。
                 .window(SlidingProcessingTimeWindows.of(Time.seconds(3600), Time.seconds(5)))
                 .sum(1);
+             wc.print();
+//        System.out.println("===============up=================");
+
+
         //每隔5秒钟做一次聚合，计算出过去时间之内热销图书榜的前三名
         wc.windowAll(TumblingProcessingTimeWindows.of(Time.seconds(5)))
                 .process(new TopNAllFunction(3))

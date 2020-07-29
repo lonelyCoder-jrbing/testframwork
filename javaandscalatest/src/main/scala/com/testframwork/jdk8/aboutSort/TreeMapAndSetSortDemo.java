@@ -18,7 +18,12 @@ public class TreeMapAndSetSortDemo {
                 .stream()
                 .collect(Collectors
                         .groupingBy(Students::getAge,
-                                Collectors.reducing((x, y) -> x.getAge() > y.getAge() ? x : y)));
+                                Collectors.reducing((x, y) -> x)));
+
+
+        System.out.println("studentMap:  "+studentMap);
+
+
 
         TreeMap<Integer, Students> map = new TreeMap<>((x, y) -> x > y ? -1 : 1);
 

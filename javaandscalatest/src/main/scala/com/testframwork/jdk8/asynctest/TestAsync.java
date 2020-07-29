@@ -41,9 +41,16 @@ public class TestAsync {
 //        appleThread.start();
 //        appleThread.join(344);
         System.out.println("我先弄，你慢慢来。。。。");
-        exceptionHandlingAsyncTaskExecutor.execute(appleThread);
+        exceptionHandlingAsyncTaskExecutor.execute(()->{run();});
 
     }
+
+    public void run(){
+
+        System.out.println("fake run method....");
+
+    }
+
 
     public static class AppleTree implements Runnable {
 

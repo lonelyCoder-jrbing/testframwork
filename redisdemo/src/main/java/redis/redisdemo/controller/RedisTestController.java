@@ -80,6 +80,7 @@ public class RedisTestController {
         hash.put("username", "jurongbing");
         hash.put("password", "123456");
         hash.put("username", "byy");
+
         Serializable stu = redisCacheTemplate.opsForValue().get("stu");
 
         return (Student) redisCacheTemplate.opsForValue().get("stu");

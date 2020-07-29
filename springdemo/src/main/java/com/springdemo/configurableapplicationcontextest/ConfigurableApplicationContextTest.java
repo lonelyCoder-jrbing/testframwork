@@ -1,4 +1,4 @@
-package com.springdemo.ConfigurableApplicationContextTest;
+package com.springdemo.configurableapplicationcontextest;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;

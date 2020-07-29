@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatisdemos.dao.balancedao.BalanceMapper">
+    <update id="updateBlance" parameterType="com.mybatisdemos.controller.castest.request.BalanceRequest">
+           update balance set balance = #{request.balance} , version = version+1
+           where name = #{request.name} and version = #{request.version}
+    </update>
+
+    <select id="getNewBlance" resultType="com.mybatisdemos.controller.castest.response.BalanceResponse">
+      select id as id ,name as name, balance as balance, version as version from balance
+       where name = #{request.name} and version-1 = #{request.version} ;
+    </select>
+
+    <update id="updateGoods" parameterType="com.mybatisdemos.controller.castest.request.GoodRequest">
+       update  t_goods set num = num  - #{request.buyNum} where id = #{request.id}
+       and num -  #{request.buyNum}>0 and status = #{request.status};
+    </update>
+    <select id="selectGoodsById" resultType="com.mybatisdemos.controller.castest.response.GoodResponse">
+       select id as id ,num as  num ,status as status ,name as name  from t_goods where id = #{request.id} and name = #{request.name};
+    </select>
+
+
+</mapper>
