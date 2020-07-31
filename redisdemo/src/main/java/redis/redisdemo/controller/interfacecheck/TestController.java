@@ -10,13 +10,11 @@ import redis.redisdemo.annotation.ApiIdempotent;
 @RequestMapping("/test")
 @Slf4j
 public class TestController {
-//
-//    @Autowired
-//    private TestService testService;
 
+    //添加 @ApiIdempotent 利用拦截器获取注解，拿到请求的头，获取header信息
     @ApiIdempotent
     @PostMapping("/testIdempotence")
     public boolean testIdempotence() {
-        return false;
+        return true;
     }
 }

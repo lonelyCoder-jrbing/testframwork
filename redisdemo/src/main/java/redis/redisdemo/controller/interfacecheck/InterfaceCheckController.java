@@ -16,11 +16,11 @@ import redis.redisdemo.service.TokenService;
 
 
 @RestController
-@RequestMapping("/token")
+    @RequestMapping("/token")
 public class InterfaceCheckController {
 
 
-    //请求其他任何接口的时候都先调用这个接口，获取一个唯一的token 将其放到header里边。
+    //在需要实现幂等性接口的上一个页面上调用这个接口
     @Autowired
     private TokenService tokenService;
     @GetMapping("/get")

@@ -14,6 +14,7 @@ import javax.xml.rpc.ServiceException;
 import java.time.Duration;
 import java.util.UUID;
 
+
 /**
  * create by sumerian on 2020/7/29
  * <p>
@@ -50,13 +51,14 @@ public class TokenServiceImpl implements TokenService {
         String s = redisTemplate.opsForValue().get(token);
         log.info("s=={}",s);
         if (redisTemplate.opsForValue().get(token)==null) {
-            throw new ServiceException("");
+            throw new ServiceException("请勿重复提交");
         }
 
         Boolean delete = redisTemplate.delete(token);
         log.info("delete=={}",delete);
         if (!delete) {
-            throw new ServiceException("");
+
+            throw new ServiceException("请勿重复提交");
         }
     }
     }

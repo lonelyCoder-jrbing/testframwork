@@ -11,15 +11,8 @@ import com.mybatisdemos.controller.springutransaction.request.AccountRequest;
  * <p>
  * desc:
  **/
-public interface BalanceService {
+public interface BalanceService1 {
 
-   boolean updateBalance(BalanceRequest request);
-
-   boolean updateGoods(GoodRequest request);
-
-   GoodResponse selectGoodsById(GoodRequest request);
-
-   BalanceResponse getNewBlance(BalanceRequest request);
 
     boolean saveBalance(AccountRequest request);
 

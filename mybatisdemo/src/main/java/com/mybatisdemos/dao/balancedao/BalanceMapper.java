@@ -4,6 +4,7 @@ import com.mybatisdemos.controller.castest.request.BalanceRequest;
 import com.mybatisdemos.controller.castest.request.GoodRequest;
 import com.mybatisdemos.controller.castest.response.BalanceResponse;
 import com.mybatisdemos.controller.castest.response.GoodResponse;
+import com.mybatisdemos.controller.springutransaction.request.AccountRequest;
 import com.mybatisdemos.controller.userstar.request.GenStarVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -23,4 +24,7 @@ public interface BalanceMapper {
     boolean updateGoods(@Param("request")GoodRequest request);
 
     GoodResponse selectGoodsById(@Param("request")GoodRequest request);
+
+    boolean insertAccount(@Param("request") AccountRequest request);
+
 }
