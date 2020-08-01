@@ -24,7 +24,7 @@ public class UserController {
     private StringRedisTemplate stringRedisTemplate;
 
     @Autowired
-    private RedisTemplate<String, Serializable> redisCacheTemplate;
+    private RedisTemplate<String, Object> redisCacheTemplate;
     @Autowired
     private CachePenetration cachePenetration;
 

@@ -7,7 +7,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.io.Serializable;
 import java.util.Objects;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -21,7 +20,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class CachePenetration {
 
     @Autowired
-    private RedisTemplate<String, Serializable> redisCacheTemplate;
+    private RedisTemplate<String, Object> redisCacheTemplate;
     public static CachePenetration cachePenetration;
 
     /***
@@ -78,7 +77,7 @@ public class CachePenetration {
     }
 
     private String getDataByKV(String key) {
-        Serializable serializable = redisCacheTemplate.opsForValue().get(key);
+        Object serializable = redisCacheTemplate.opsForValue().get(key);
         if (Objects.isNull(serializable)) {
             return null;
         }

@@ -17,7 +17,8 @@ import java.util.List;
 /**
  * create by sumerian on 2020/7/29
  * <p>
- * desc:使用数据库的乐观锁更新账户余额,商品库存
+ * desc:1.使用数据库的乐观锁更新账户余额,商品库存
+ *      2.也可以使用数据库的乐观锁实现分布式锁
  **/
 
 @RestController

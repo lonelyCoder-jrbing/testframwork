@@ -23,7 +23,7 @@ public class RedisTestController {
     StringRedisTemplate redisTemplate;
 
     @Autowired
-    private RedisTemplate<String, Serializable> redisCacheTemplate;
+    private RedisTemplate<String, Object> redisCacheTemplate;
 
     @Autowired
     private RedissonClient client;
@@ -81,7 +81,7 @@ public class RedisTestController {
         hash.put("password", "123456");
         hash.put("username", "byy");
 
-        Serializable stu = redisCacheTemplate.opsForValue().get("stu");
+        Object stu = redisCacheTemplate.opsForValue().get("stu");
 
         return (Student) redisCacheTemplate.opsForValue().get("stu");
 
@@ -94,7 +94,7 @@ public class RedisTestController {
         //存储序列化对象
         BoundHashOperations<String, Object, Object> hash = redisTemplate.boundHashOps("hash");
         redisCacheTemplate.opsForValue().set("stu", new Student(1, "jurongbing", 12));
-        Serializable stu = redisCacheTemplate.opsForValue().get("stu");
+        Object stu = redisCacheTemplate.opsForValue().get("stu");
         return (Student) redisCacheTemplate.opsForValue().get("stu");
 
     }

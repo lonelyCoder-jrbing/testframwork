@@ -97,11 +97,11 @@ public class RedisConfiguration {
 
 
     @Bean
-    public RedisTemplate<String, Serializable> redisCacheTemplate(@Qualifier("lettuceConnectionFactory")LettuceConnectionFactory connectionFactory) {
+    public RedisTemplate<String, Object> redisCacheTemplate(@Qualifier("lettuceConnectionFactory")LettuceConnectionFactory connectionFactory) {
 
-        RedisTemplate<String, Serializable> template = new RedisTemplate<>();
+        RedisTemplate<String, Object> template = new RedisTemplate<>();
         template.setKeySerializer(new StringRedisSerializer());
-        template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+//        template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
         template.setConnectionFactory(connectionFactory);
         return template;
     }
