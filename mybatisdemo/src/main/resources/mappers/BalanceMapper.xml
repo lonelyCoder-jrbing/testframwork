@@ -18,7 +18,7 @@
     <select id="selectGoodsById" resultType="com.mybatisdemos.controller.castest.response.GoodResponse">
        select id as id ,num as  num ,status as status ,name as name  from t_goods where id = #{request.id} and name = #{request.name};
     </select>
-    <insert id="insertAccount" parameterType="com.mybatisdemos.controller.springutransaction.request.AccountRequest">
+    <insert id="insertAccount" parameterType="com.mybatisdemos.controller.springtransaction.request.AccountRequest">
       insert  into balance (name,balance,version)
       values
       (

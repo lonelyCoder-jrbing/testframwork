@@ -2,6 +2,8 @@ package com.mybatisdemos.rabbitmq.rabbitconfig;
 
 
 import com.mybatisdemos.rabbitmq.mqcallback.MsgSendConfirmCallBack;
+import com.mybatisdemos.rabbitmq.mqcallback.ORDERConfirmCallBack;
+import com.mybatisdemos.serivce.GoodsService;
 import org.springframework.amqp.core.AcknowledgeMode;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -89,7 +91,7 @@ public class RabbitMqConfig {
          * 必须要配置publisherConfirms或publisherReturns为true
          * 每个rabbitTemplate只能有一个confirm-callback和return-callback
          */
-        template.setConfirmCallback(msgSendConfirmCallBack());
+        template.setConfirmCallback(orderConfirmCallBack());
 //        template.setReturnCallback(msgSendReturnCallback());
         /**
          * 使用return-callback时必须设置mandatory为true，或者在配置中设置mandatory-expression的值为true，
@@ -112,4 +114,10 @@ public class RabbitMqConfig {
     public MsgSendConfirmCallBack msgSendConfirmCallBack(){
         return new MsgSendConfirmCallBack();
     }
+
+    @Bean
+    public ORDERConfirmCallBack orderConfirmCallBack(){
+        return new ORDERConfirmCallBack();
+    }
+
 }

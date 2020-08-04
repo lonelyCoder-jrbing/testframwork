@@ -4,8 +4,7 @@ import com.mybatisdemos.controller.castest.request.BalanceRequest;
 import com.mybatisdemos.controller.castest.request.GoodRequest;
 import com.mybatisdemos.controller.castest.response.BalanceResponse;
 import com.mybatisdemos.controller.castest.response.GoodResponse;
-import com.mybatisdemos.controller.springutransaction.request.AccountRequest;
-import com.mybatisdemos.controller.userstar.request.GenStarVO;
+import com.mybatisdemos.controller.springtransaction.request.AccountRequest;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

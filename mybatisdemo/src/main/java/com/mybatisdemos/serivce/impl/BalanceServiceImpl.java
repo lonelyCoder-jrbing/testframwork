@@ -4,7 +4,7 @@ import com.mybatisdemos.controller.castest.request.BalanceRequest;
 import com.mybatisdemos.controller.castest.request.GoodRequest;
 import com.mybatisdemos.controller.castest.response.BalanceResponse;
 import com.mybatisdemos.controller.castest.response.GoodResponse;
-import com.mybatisdemos.controller.springutransaction.request.AccountRequest;
+import com.mybatisdemos.controller.springtransaction.request.AccountRequest;
 import com.mybatisdemos.dao.balancedao.BalanceMapper;
 import com.mybatisdemos.serivce.BalanceService;
 import com.mybatisdemos.serivce.BalanceService1;
@@ -23,6 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Slf4j
 public class BalanceServiceImpl implements BalanceService {
+
     @Autowired
     private BalanceMapper balanceMapper;
      @Autowired
@@ -30,7 +31,7 @@ public class BalanceServiceImpl implements BalanceService {
 
     @Override
     public boolean updateBalance(BalanceRequest request) {
-        log.info("request==={}", request.getBalance());
+        log.info("OrderInfoRequest==={}", request.getBalance());
         return balanceMapper.updateBlance(request);
     }
 
@@ -54,12 +55,11 @@ public class BalanceServiceImpl implements BalanceService {
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
     public boolean saveBalance(AccountRequest request) {
-
+        //这里在方法调用的时候要注意，对象内部方法互相调用，
+        //Transactional注解不会被拦截到,@Transactional注解们不会生效
         boolean b =balanceService1.saveBalance(request);
         boolean b1 = balanceMapper.insertAccount(request);
         int i = 1 / 0;
         return b1 && b;
     }
-
-
 }

@@ -1,6 +1,6 @@
 package com.mybatisdemos.serivce.impl;
 
-import com.mybatisdemos.controller.springutransaction.request.AccountRequest;
+import com.mybatisdemos.controller.springtransaction.request.AccountRequest;
 import com.mybatisdemos.dao.balancedao.BalanceMapper;
 import com.mybatisdemos.serivce.BalanceService1;
 import org.springframework.beans.factory.annotation.Autowired;

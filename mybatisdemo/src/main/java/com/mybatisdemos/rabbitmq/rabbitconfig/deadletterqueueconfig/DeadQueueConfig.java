@@ -37,7 +37,7 @@ public class DeadQueueConfig {
     }
 
     /**
-     * 声明一个私信队列，x-dead-letter-exchange对应死信交换器，x-dead-letter-routing-key对应私信队列
+     * 声明一个死信队列，x-dead-letter-exchange对应死信交换器，x-dead-letter-routing-key对应私信队列
      */
     @Bean("deadLetterQueue")
     public Queue deadLetterQueue() {

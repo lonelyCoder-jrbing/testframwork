@@ -34,11 +34,6 @@ public class Consumer3 {
         byte[] body = message.getBody();
         String msg = new String(body,"UTF-8");
 
-
-
-
-
-
     }
 
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatisdemos.dao.orderdao.OrderDao">
+    <resultMap id="orderResult" type="com.mybatisdemos.controller.distributetransactionbymq.request.OrderInfoRequest">
+        <id column="order_id" property="orderId"/>
+        <result column="order_content" property="orderContent"/>
+        <result column="user_id" property="userId"/>
+        <result column="create_time" property="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <insert id="insertOrder"
+            parameterType="com.mybatisdemos.controller.distributetransactionbymq.request.OrderInfoRequest">
+
+   insert  into t_order (order_id,order_content,user_id,create_time)
+   values
+   (
+   #{request.orderId},
+   #{request.orderContent},
+   #{request.userId},
+   #{request.createTime}
+   )
+    </insert>
+    <insert id="insertConfirm" parameterType="com.mybatisdemos.serivce.dto.ConfirmDTO">
+       insert into t_confirm (order_no,order_info,send_status,create_time) values
+         (#{request.orderId},
+          #{request.orderInfo},
+          #{request.sendStatus},
+          #{request.createTime}
+         );
+    </insert>
+    <update id="updateConfirm" parameterType="com.mybatisdemos.serivce.dto.ConfirmDTO">
+      update t_confirm set send_status  = #{confirmDTO.sendStatus},create_time = #{confirmDTO.createTime} where order_no = #{confirmDTO.orderId}
+    </update>
+    <select id="queryForList" parameterType="com.mybatisdemos.serivce.dto.ConfirmDTO"
+            resultMap="orderResult">
+      select
+      o.order_id,
+      o.user_id,
+      o.order_content,
+      o.create_time
+       from t_order o left join t_confirm c on o.order_id = c.order_no
+        where c.send_status = #{confirmDTO.sendStatus}
+    </select>
+
+</mapper>
