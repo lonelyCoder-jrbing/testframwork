@@ -3,13 +3,15 @@ package com.testframwork.algorithm.bloom;
 import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.List;
- 
+
 public class BloomFilter {
+    //二进制向量的位数，相当于能存储1000万条url左右，误报率为千万分之一
     private static final int DEFAULT_SIZE = 2 << 24;
+    //用于生成信息指纹的8个随机数，最好选取质数
     private static final int[] seeds = new int[] { 5, 7, 11, 13, 31, 37, 61 };
     private BitSet bits = new BitSet(DEFAULT_SIZE);
     private SimpleHash[] func = new SimpleHash[seeds.length];
- 
+
     public BloomFilter() {
         for (int i = 0; i < seeds.length; i++) {
             func[i] = new SimpleHash(DEFAULT_SIZE, seeds[i]);

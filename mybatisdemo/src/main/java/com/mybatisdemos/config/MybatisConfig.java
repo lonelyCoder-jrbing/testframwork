@@ -1,18 +1,23 @@
 package com.mybatisdemos.config;
 
-//import com.mchange.v2.c3p0.ComboPooledDataSource;
-import lombok.Data;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.ConnectionCallback;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.StatementCallback;
+
+import java.sql.SQLException;
+import java.sql.Statement;
 
 //@EnableAutoConfiguration
 //@Data
 public class MybatisConfig {
-//    @Autowired
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    //    @Autowired
 //    private ComboPooledDataSource dataSource;
 //
 //    @Bean
@@ -30,6 +35,15 @@ public class MybatisConfig {
 //
 //    @Bean
 //    public SqlSessionTemplate getSqlSessionTemplate() {
-//        return new SqlSessionTemplate(getSqlSessionFactory());
+////        return new SqlSessionTemplate(getSqlSessionFactory());
+//        String sql = "";
+//
+//        jdbcTemplate.execute((StatementCallback<Object>) (statement) -> {
+//            return statement.execute(sql);
+//        });
+//        return null;
+//
 //    }
+
+
 }

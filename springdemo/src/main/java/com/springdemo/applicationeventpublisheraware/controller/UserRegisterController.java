@@ -3,6 +3,8 @@ package com.springdemo.applicationeventpublisheraware.controller;
 import com.google.common.util.concurrent.RateLimiter;
 import com.springdemo.applicationeventpublisheraware.entity.User;
 import com.springdemo.applicationeventpublisheraware.service.UserRegisterService;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +29,6 @@ public class UserRegisterController {
 		//do something here
 		semaphore.release();
 		return "[controller]注册用户成功！";
-		
+
 	}	
 }
