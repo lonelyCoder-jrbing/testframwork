@@ -16,13 +16,14 @@ import redis.redisdemo.service.TokenService;
 
 
 @RestController
-    @RequestMapping("/token")
+@RequestMapping("/token")
 public class InterfaceCheckController {
 
 
     //在需要实现幂等性接口的上一个页面上调用这个接口
     @Autowired
     private TokenService tokenService;
+
     @GetMapping("/get")
     public String token() {
         return tokenService.createToken();

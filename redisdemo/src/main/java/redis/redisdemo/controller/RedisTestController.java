@@ -1,11 +1,13 @@
 package redis.redisdemo.controller;
 
+import com.alibaba.fastjson.JSON;
+import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.*;
 import org.redisson.client.codec.StringCodec;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.BoundHashOperations;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.connection.RedisConnection;
+import org.springframework.data.redis.core.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,10 +16,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import redis.redisdemo.pojo.Student;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping(value = "/redis")
+@Slf4j
 public class RedisTestController {
     @Autowired
     StringRedisTemplate redisTemplate;
@@ -98,4 +108,49 @@ public class RedisTestController {
         return (Student) redisCacheTemplate.opsForValue().get("stu");
 
     }
+
+    //redis的批量插入数据
+    @GetMapping(value = "/test04")
+    @ResponseBody
+    public Student test04() {
+        List<Student> students = new ArrayList<>();
+        Student student1 = new Student(1, "jurongbing", 12);
+        students.add(student1);
+        Student student2 = new Student(2, "jurongbing2", 13);
+        students.add(student2);
+        //
+        String g = "STUDENT";
+
+        //批量插入数据 方式一
+        redisTemplate.executePipelined(new RedisCallback<List<Student>>() {
+            @Override
+            public List<Student> doInRedis(RedisConnection connection) throws DataAccessException {
+                students.forEach(el -> {
+                    connection.hSet(g.getBytes(), String.valueOf(el.getId()).getBytes(), JSON.toJSONString(el).getBytes());
+                });
+                return null;
+            }
+        });
+        //批量插入数据 方式二
+        RedisConnection connection = redisTemplate.getConnectionFactory().getConnection();
+        Map<Integer, Student> collect = students.stream().collect(Collectors.toMap((Student::getId), Function.identity(), (k1, k2) -> k2));
+        Map<byte[], byte[]> hashes = new HashMap<>();
+
+        collect.forEach((k, v) -> {
+            hashes.put(String.valueOf(k).getBytes(), v.toString().getBytes());
+        });
+        connection.hMSet(g.getBytes(), hashes);
+
+
+        //通过游标获取
+        Cursor<Map.Entry<Object, Object>> scan = redisTemplate.opsForHash().scan(g, ScanOptions.scanOptions().count(1000).build());
+        while (scan.hasNext()){
+            Map.Entry<Object, Object> next = scan.next();
+            log.info("key:   {}",next.getKey());
+            log.info("value:   {}",next.getValue());
+        }
+        return null;
+
+    }
+
 }
