@@ -18,7 +18,7 @@ import java.io.IOException;
 /**
  * create by sumerian on 2020/8/3
  * <p>
- * desc:
+ * desc:  运单业务
  **/
 @Service
 @Slf4j
@@ -41,20 +41,18 @@ public class TransportOrderImpl implements TransportOrder {
         //生成运单
 
         try {
-            byte[] body = message.getBody();
-            String orderInfoRequestStr = JSON.toJSONString(body);
             OrderInfoRequest orderInfoRequest = JSONObject.parseObject(message.getBody(), OrderInfoRequest.class);
 
-            log.info("TransportOrderImpl@@createTransportOrder###orderInfoRequestStr=={}", orderInfoRequestStr);
+            log.info("TransportOrderImpl@@createTransportOrder###orderInfoRequestStr=={}", orderInfoRequest);
             //接受的消息使用redis保证消息的幂等性
             String orderId = redisTemplate.opsForValue().get(orderInfoRequest.getOrderId());
             log.info("TransportOrderImpl@@createTransportOrder###orderId={}", orderId);
             if (orderId == null) {
                 log.info("生成运单逻辑。。。。。{}", message);
+                //生成运单逻辑异常
+                // int i = 1 / 0;
                 redisTemplate.opsForValue().set(orderInfoRequest.getOrderId(), "1");
             }
-            //生成运单逻辑异常
-//            int i = 1 / 0;
             channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
         } catch (Exception e) {
             log.info("TransportOrderImpl@@createTransportOrder###====error{}", e);

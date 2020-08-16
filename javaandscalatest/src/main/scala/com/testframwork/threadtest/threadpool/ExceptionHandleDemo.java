@@ -67,6 +67,10 @@ public class ExceptionHandleDemo {
         return "";
     }
 
+    /**
+     * 创建线程，调用线程中的setUncaughtExceptionHandler方法，。
+     * @return
+     */
     public static String demo03() {
         ExecutorService service = Executors.newFixedThreadPool(1, r -> {
             Thread t = new Thread(r);

@@ -17,6 +17,7 @@ public class TopNProducer {
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
 
+
         FlinkKafkaProducer<String> producer = new FlinkKafkaProducer<>("topn", new SimpleStringSchema(), properties);
         source.addSink(producer);
         env.execute("topnProducer");

@@ -61,7 +61,7 @@ object HotItems {
       //先对itemID进行分组
       .keyBy(_.itemId)
       //然后设置timeWindow，size为1小时，步长为5分钟的滑动窗口
-      .timeWindow(Time.hours(1), Time.minutes(5))
+      .timeWindow(Time.hours(1), Time.milliseconds(5))
       //窗口聚合，按道理说应该不用窗口聚合，但是因为达到的数据可能时间顺序会扰乱，所以聚合后要keyby
       .aggregate(new CountAgg(), new WindowResult())
       .keyBy(_.windowEnd) //按照窗口分组

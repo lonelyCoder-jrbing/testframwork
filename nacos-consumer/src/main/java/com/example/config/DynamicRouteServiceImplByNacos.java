@@ -4,11 +4,16 @@ import com.alibaba.nacos.api.NacosFactory;
 import com.alibaba.nacos.api.config.ConfigService;
 import com.alibaba.nacos.api.config.listener.Listener;
 import com.alibaba.nacos.api.exception.NacosException;
+import org.apache.dubbo.config.spring.ReferenceBean;
+import org.apache.dubbo.registry.RegistryService;
+import org.apache.dubbo.registry.integration.RegistryProtocol;
+import org.apache.dubbo.registry.nacos.NacosRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import java.util.concurrent.Executor;
@@ -23,7 +28,6 @@ import java.util.concurrent.Executor;
 public class DynamicRouteServiceImplByNacos implements CommandLineRunner {
 
     private static Logger logger = LoggerFactory.getLogger(DynamicRouteServiceImplByNacos.class);
-
     @Value("${spring.cloud.nacos.config.refreshable-dataids}")
     private  String dataId;
 

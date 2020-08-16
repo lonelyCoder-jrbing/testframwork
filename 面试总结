@@ -70,6 +70,25 @@
 10.使用feign时跨服务的大文件上传
 11.数据迁移解决方案
 
+跨越速运：
+  1.dubbo的负载均衡实现?服务注册与发现？详细过程。
+  2.mysql的数据迁移？采用binlog方式
+  3.jvm young gc过程详细
+  4.expain的用法？有没有用到索引的字段？
+  5.rabbitmq 广播模式发送消息
+
+
+奥晢：
+  1. springmvc执行流程
+  2. mysql b+ tree高度？
+  3. springboot自动配置
+
+
+
+
+
+
+
 开思软件：
   1.mapreduce原理。
   2.线程池的调度过程

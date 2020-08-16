@@ -2,6 +2,11 @@ package com.testframwork.threadtest.threadpool;
 
 import sun.awt.windows.ThemeReader;
 
+import javax.xml.crypto.Data;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.*;
 import java.util.stream.IntStream;
 
@@ -12,14 +17,16 @@ import java.util.stream.IntStream;
  * desc:  各种线程池的功能比较
  **/
 public class ThreadpoolDemo {
+    ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(2);
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
 //        demo01();
 //        demmo02();
 //        demo03();
-        demo04();
-
+//        demo04();
+//        timer2();
+      new ThreadpoolDemo().run("j1","j2","j3");
     }
 
     /***
@@ -69,7 +76,7 @@ public class ThreadpoolDemo {
                 System.out.println("el---->" + el);
                 System.out.println("thread name---->" + Thread.currentThread().getName());
                 try {
-                    TimeUnit.SECONDS.sleep(1);
+                    TimeUnit.SECONDS.sleep(2);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -100,13 +107,65 @@ public class ThreadpoolDemo {
      * @return
      */
     public static String demo04() {
-        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(1);
-//        for (int i = 0; i < 5; i++) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:MM:SS");
+        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(2);
+        long l = System.currentTimeMillis();
+        System.out.println("begin:   " + l);
+        for (int i = 0; i < 2; i++) {
+            scheduledExecutorService.scheduleWithFixedDelay(() -> {
+                System.out.println(Thread.currentThread().getName() + "正在执行" + "currentTime:{}" + new Date());
+            }, 1, 3, TimeUnit.SECONDS);
+        }
+        System.out.println("now:   " + System.currentTimeMillis());
+        for (; ; ) {
+            if (System.currentTimeMillis() - l > 10000) {
+                System.out.println("now:   " + System.currentTimeMillis());
+                scheduledExecutorService.shutdown();
+
+                return "";
+            }
+        }
+    }
+
+
+    //利用线程池代替定时任务
+    public void run(String str1, String str2, String str3) throws ExecutionException, InterruptedException {
+        long l = System.currentTimeMillis();
+        ScheduledFuture<?> scheduledFuture = scheduledExecutorService.scheduleWithFixedDelay(() -> {
+            print(str1);
+        }, 1L, 3L, TimeUnit.SECONDS);
         scheduledExecutorService.scheduleWithFixedDelay(() -> {
-            System.out.println(Thread.currentThread().getName() + "正在执行" + "currentTime:{}" + System.currentTimeMillis());
-        }, 1, 3, TimeUnit.SECONDS);
-//        }
-        return "";
+            print(str2, str3);
+        }, 1L, 3L, TimeUnit.SECONDS);
+        for (; ; ) {
+            if (System.currentTimeMillis() - l > 10000) {
+                scheduledExecutorService.shutdown();
+                   return;
+            }
+        }
+
+
+    }
+
+
+    //任务一
+    public void print(String str1) {
+        System.out.println("任务一 processing...param：  " + str1);
+    }
+
+    //任务二
+    public void print(String str1, String str2) {
+        System.out.println("任务2 processing...param1：  " + str1 + " param2:  " + str2);
+    }
+
+    public static void timer2() {
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println("-------设定要指定任务--------now： "+new Date());
+            }
+        }, 1000, 5000);
     }
 
 

@@ -28,6 +28,7 @@ object KafkaWordProducer {
     props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, brokers)
     props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer")
     props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer")
+//    props.put(ProducerConfig.ACKS_CONFIG,"-1");
     val producer = new KafkaProducer[String, String](props)
     while (true) {
       val tz = TimeZone.getTimeZone("Asia/Shanghai")
@@ -36,7 +37,8 @@ object KafkaWordProducer {
       val placeholder = "{,%s,%s,%s,%s,%s,}"
 //     val msg =  UserBehavior(Random.nextInt(10), Random.nextInt(100), Random.nextInt(1000), "pv", instant.toEpochMilli)
 
-      val formatted = placeholder.format(Random.nextInt(10),
+      val formatted = placeholder.format(
+        Random.nextInt(10),
         Random.nextInt(10),
         Random.nextInt(1000),
         "pv",

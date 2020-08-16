@@ -28,8 +28,10 @@ public class kafkaProducer {
               send.addCallback(new ListenableFutureCallback<SendResult<String,Object>>() {
                   @Override
                   public void onFailure(Throwable ex) {
+
                       //对发送失败的消息进行处理
                       log.info("hello" + " - 生产者 发送消息失败：" + ex.getMessage());
+
                   }
                   @Override
                   public void onSuccess(SendResult<String,Object> result) {

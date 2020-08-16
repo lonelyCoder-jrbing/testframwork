@@ -34,7 +34,8 @@ object KafkaWordProducer {
 
       val placeholder = "{\"user_id\": \"%s\", \"item_id\":\"%s\", \"category_id\": \"%s\", \"behavior\": \"%s\", \"ts\": \"%s\"}"
 
-      val formatted = placeholder.format(Random.nextInt(10),
+      val formatted = placeholder.format(
+        Random.nextInt(10),
         Random.nextInt(100),
         Random.nextInt(1000),
         "pv",
