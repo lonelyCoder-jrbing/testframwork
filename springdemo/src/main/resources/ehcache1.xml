@@ -1,0 +1,97 @@
+<ehcache:config
+        xmlns:ehcache="http://www.ehcache.org/v3"
+        xmlns:jcache="http://www.ehcache.org/v3/jsr107" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.ehcache.org/v3/jsr107 ">
+
+    <!--
+       services to be managed and lifecycled by the CacheManager
+       用来管理缓存管理器的生命周期，当使用UserCacheManager才需要用到
+    -->
+    <ehcache:service>
+        <!--
+          One element in another namespace, using our JSR-107 extension as an example here
+          使用Jcache作为接口，即JSR-107扩展才需要用到
+        -->
+        <jcache:defaults>
+            <jcache:cache name="invoices" template="myDefaultTemplate"/>
+        </jcache:defaults>
+    </ehcache:service>
+
+    <!--
+        必须拥有的属性，为cache起一个别名，给cacheManager管理
+    -->
+    <ehcache:cache alias="productCache">
+
+        <!--
+          key类型默认是Object类型
+        -->
+        <ehcache:key-type copier="org.ehcache.impl.copy.SerializingCopier">java.lang.Long</ehcache:key-type>
+
+        <!--
+          value类型默认是Object类型
+        -->
+        <ehcache:value-type copier="org.ehcache.impl.copy.SerializingCopier">com.pany.domain.Product
+        </ehcache:value-type>
+
+        <ehcache:expiry>
+            <!--
+                   * <ttl>, time to live; 从创建entry到过期的时间
+                   * <class>, for a custom Expiry implementation; 自定义过期类
+                   * <none>, for no expiry 默认不过期
+                   下面为entry的空闲时间
+            -->
+            <ehcache:tti unit="minutes">2</ehcache:tti>
+        </ehcache:expiry>
+
+        <!--
+            可选，advice，写一个实现了EvictionAdvisor接口的类来控制哪些entry被驱逐（比如key为偶数的才可以进行缓存）
+        -->
+        <ehcache:eviction-advisor>com.pany.ehcache.OddEvictionAdvisor</ehcache:eviction-advisor>
+
+        <!--
+          把cache当作系统缓存（系统记录）来使用
+            Let's you configure your cache as a "cache-through",
+            i.e. a Cache that uses a CacheLoaderWriter to load on misses, and write on mutative operations.
+        -->
+        <ehcache:loader-writer>
+            <!--
+              下面是自定义的一个类，我还没弄明白为什么要把缓存升级为系统缓存，这里留个疑问...
+            -->
+            <ehcache:class>com.pany.ehcache.integration.ProductCacheLoaderWriter</ehcache:class>
+            <!-- Any further elements in another namespace -->
+        </ehcache:loader-writer>
+
+        <!--
+            The maximal number of entries to be held in the Cache, prior to eviction starting
+            此缓存最多可存储的键值对数
+        -->
+        <ehcache:heap unit="entries">200</ehcache:heap>
+    </ehcache:cache>
+
+    <!--
+        缓存模板，可被其他缓存引用，避免重复定义相似的cache
+    -->
+    <ehcache:cache-template name="myDefaultTemplate">
+        <ehcache:expiry>
+            <ehcache:none/>
+        </ehcache:expiry>
+    </ehcache:cache-template>
+
+    <!--
+      引用上面定义的模板
+    -->
+    <ehcache:cache alias="customerCache" uses-template="myDefaultTemplate">
+        <!--
+          Adds the key and value type configuration
+          在模板的基础上添加key、value的类型
+        -->
+        <ehcache:key-type>java.lang.Long</ehcache:key-type>
+        <ehcache:value-type>com.pany.domain.Customer</ehcache:value-type>
+        <!--
+          Overwrites the capacity limit set by the template to a new value
+          可以通过重写覆盖模板的属性
+        -->
+        <ehcache:heap unit="entries">200</ehcache:heap>
+    </ehcache:cache>
+
+</ehcache:config>

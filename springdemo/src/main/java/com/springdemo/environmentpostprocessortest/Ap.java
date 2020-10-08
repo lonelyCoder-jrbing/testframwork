@@ -14,7 +14,7 @@ public class Ap {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(Ap.class, args);
-        String userName = context.getEnvironment().getProperty("jdbc.root.user");
+        String userName = context.getEnvironment().getProperty("jdbc.root.User");
         System.out.println("userName： "+userName);
         String passWord = context.getEnvironment().getProperty("jdbc.root.password");
         System.out.println("passWord: "+passWord);

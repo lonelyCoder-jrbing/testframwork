@@ -8,7 +8,7 @@ public class User {
     private Address address;
 
     public User(Address address) {
-        System.out.println("user begin  ...");
+        System.out.println("User begin  ...");
     }
 
     public Address getAddress() {

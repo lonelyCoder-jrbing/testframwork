@@ -22,7 +22,7 @@ public class MyImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegi
         person04.setName("ju");
         RootBeanDefinition rootBeanDefinition = new RootBeanDefinition(person04.getClass());
         //将生成的BeanDefinition注册到容器中
-        registry.registerBeanDefinition("user",rootBeanDefinition);
+        registry.registerBeanDefinition("User",rootBeanDefinition);
     }
 
 

@@ -9,7 +9,7 @@ import com.mybatisdemos.domain.User;
  **/
 public class UserDaoProvider {
     public String findUserById(User user) {
-        String sql = "SELECT * FROM user";
+        String sql = "SELECT * FROM User";
         if(user.getId()!=null){
             sql += " where id = #{id}";
         }

@@ -82,7 +82,7 @@ public class UserController {
                         .userAge(20+i)
                         .loginTime(new Date())
                         .build()
-        ).peek(el->log.info("user:  {}",el)).collect(Collectors.toList());
+        ).peek(el->log.info("User:  {}",el)).collect(Collectors.toList());
 
         int i = userService.insertUserbatch(userList);
         return i;
@@ -102,7 +102,7 @@ public class UserController {
                         .patternLock("jrbing@001")
                         .userName("jurongbing" + i)
                         .build()
-        ).peek(el->log.info("user:  {}",el)).collect(Collectors.toList());
+        ).peek(el->log.info("User:  {}",el)).collect(Collectors.toList());
 
         int i = userService.insertbatch(userList);
         return i;
@@ -118,7 +118,7 @@ public class UserController {
                         .patternLock("byingyue")
                         .userName("jurongbing" + i)
                         .build()
-        ).peek(el->log.info("user:  {}",el)).collect(Collectors.toList());
+        ).peek(el->log.info("User:  {}",el)).collect(Collectors.toList());
 
         int i = userService.updatebatch(userList);
         return i;

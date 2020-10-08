@@ -27,7 +27,7 @@ public class GenStarServiceImpl implements GenStarService {
         //一篇文章一个用户只能点一次赞，不能多次点赞
         //键为postid 加上userid， 值为userid
         BoundHashOperations<String, Object, Object> starHash = redisTemplate.boundHashOps("star");
-        BoundHashOperations<String, Object, Object> userHash = redisTemplate.boundHashOps("user");
+        BoundHashOperations<String, Object, Object> userHash = redisTemplate.boundHashOps("User");
         BoundHashOperations<String, Object, Object> postHash = redisTemplate.boundHashOps("post");
 
         if (starHash.get(String.valueOf(genStarVO.getPostId()) + " " + String.valueOf(genStarVO.getUserId())) == null) {
