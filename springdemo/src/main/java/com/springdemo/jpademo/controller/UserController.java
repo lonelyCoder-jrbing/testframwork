@@ -20,11 +20,18 @@ public class UserController {
     @Autowired
     private UsersDao usersDao;
 
+    /****
+     * 当传入的参数不带自增主键的时候
+     *     --无论每次传入的数据是否一样都会做一条数据的插入 id为表中最后一条数据id+1
+     *  当传入的时候带自增主键的时候
+     *  先select
+     *     --如果数据不存则之间insert
+     *     --如果有主键存在则update
+     * @param users
+     */
     @PostMapping(path = "adduser")
     public void saveUser(@RequestBody Users users) {
-
         this.usersDao.save(users);
-
     }
 
     @GetMapping(path = "findByUsernameIs")
