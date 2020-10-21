@@ -29,4 +29,12 @@ public class WebLogTestController {
     public String webLogTest(String str) {
         return "成功返回:" + str;
     }
+
+    @GetMapping("/testApectj")
+    @WebLog(description = "这里是方法描述")
+    public String testApectj(String str) {
+        return "成功返回:" + str;
+    }
+
+
 }

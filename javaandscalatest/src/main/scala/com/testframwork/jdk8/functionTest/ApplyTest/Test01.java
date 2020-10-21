@@ -1,5 +1,8 @@
 package com.testframwork.jdk8.functionTest.ApplyTest;
 
+import com.github.benmanes.caffeine.cache.CacheLoader;
+
+import java.util.Comparator;
 import java.util.function.Function;
 
 public class Test01 {
@@ -13,7 +16,7 @@ public class Test01 {
 
         Function<Integer, Integer> function = e -> e + 1;
 //    int res1 = modifyTheValue(myNumber, (x) -> x + 20);
-        int res1 = modifyTheValue(myNumber, function);
+        int res1 = modifyTheValue(myNumber,  e -> e + 1);
         System.out.println(res1); // 30
         //  使用匿名内部类实现
         int res2 = modifyTheValue(myNumber, new Function<Integer, Integer>() {
@@ -23,7 +26,6 @@ public class Test01 {
             }
         });
         System.out.println(res2); // 30
-
 
     }
 

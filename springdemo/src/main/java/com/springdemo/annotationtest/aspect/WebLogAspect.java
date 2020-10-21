@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.springdemo.annotationtest.annotations.WebLog;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
@@ -56,5 +57,8 @@ public class WebLogAspect {
         logger.info("日志耗时：{} ms",(System.currentTimeMillis() - startTime));
         return obj;
     }
-
+    @AfterReturning(value = "execution(* com.springdemo.annotationtest.controllers.WebLogTestController.webLogTest(..)) && args(strs)")
+    public void saveDeptOrUser(String  strs) throws Throwable {
+       log.info("strs:==={}",strs);
+    }
 }

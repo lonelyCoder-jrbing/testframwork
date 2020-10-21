@@ -7,12 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
+import java.util.stream.Stream;
 
 public class Test01 {
 
     public static void main(String[] args) {
-        //
-//    Function function = new MyFunction();
+        boolean greaterThanZero = Stream.of(-1, -2, 0, -5).anyMatch(num -> num > 0);
+        System.out.println(greaterThanZero);
+
+
+        //    Function function = new MyFunction();
         Function<Integer, String> str = e -> String.valueOf(e);
         Function<Teacher, Integer> toInteger = e -> e.getAge().get();
         Function<Integer, Teacher> toTeacher = e -> {

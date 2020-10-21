@@ -4,6 +4,6 @@ import com.testframwork.jdk8.optionalTest.Student;
 
 public interface FunctionalInterfaceTest01 {
 
-    boolean getName(Student x);
+    boolean isMan(Student x);
 
 }

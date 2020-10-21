@@ -9,6 +9,7 @@ public class Student {
 
     private Optional<String> name;
     private Optional<Integer> age;
+    private Optional<Boolean> man;
 
 
 }

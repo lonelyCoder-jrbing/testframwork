@@ -56,9 +56,9 @@ public class User {
     }
 
     public static class Averager {
-
+        //总的年龄
         private int total = 0;
-
+        //学生的总人数
         private int count = 0;
 
         public Averager() {
@@ -71,16 +71,18 @@ public class User {
 
         }
 
-       //可以将其看做是consumer
+       //可以将其看做是consumer  每一次都是新创建一个user，然后从管道中流过来
         public void accept(int i) {
             total += i;
+            System.out.println("total:  "+total);
             count++;
         }
 
+        //流到最后是将每一个user对象中的年龄相加起来。
         public void combine(Averager other) {
 
             total += other.total;
-
+            System.out.println("combine total:  "+total);
             count += other.count;
 
         }
