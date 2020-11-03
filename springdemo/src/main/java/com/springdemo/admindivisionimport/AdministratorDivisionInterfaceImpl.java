@@ -12,10 +12,10 @@ public class AdministratorDivisionInterfaceImpl implements AdministratorDivision
 
     @Override
     public boolean saveData(List<AdministratorDivisionBO> administratorDivisionBOS) {
-
-        for (AdministratorDivisionBO administratorDivisionBO : administratorDivisionBOS) {
-            administratorDivisionRepository.save(administratorDivisionBO);
-        }
-        return false;
+        administratorDivisionRepository.saveAll(administratorDivisionBOS);
+//        for (AdministratorDivisionBO administratorDivisionBO : administratorDivisionBOS) {
+//            administratorDivisionRepository.save(administratorDivisionBO);
+//        }
+        return true;
     }
 }

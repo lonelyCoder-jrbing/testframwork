@@ -20,18 +20,34 @@ public class AdministrationDivisionImportController {
     @Autowired
     AdministratorDivisionInterface iadministratorDivisionInterface;
 
+    /***
+     *
+     * @param file
+     * @param parseCode 0001 行政区划； 0002国家和地区
+     * @return
+     * @throws IOException
+     */
+
     @PostMapping("/uploadWithConstructor")
-    public String uploadWithConstructor(@RequestBody MultipartFile file, String parseCode) throws IOException {
+    public String uploadWithConstructor(@RequestBody MultipartFile file, String parseCode)  {
 
         if (Objects.isNull(parseCode)) {
             return "";
         }
         switch (parseCode) {
             case "0001":
-                EasyExcel.read(file.getInputStream(), DicVO.class, new ExcelListener(iadministratorDivisionInterface, parseCode)).sheet("行政区划").doRead();
+                try {
+                    EasyExcel.read(file.getInputStream(), DicVO.class, new ExcelListener(iadministratorDivisionInterface, parseCode)).sheet("行政区划").doRead();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "0002":
-                EasyExcel.read(file.getInputStream(), DicVO.class, new ExcelListener(iadministratorDivisionInterface, parseCode)).sheet("国家和地区名称代码").doRead();
+                try {
+                    EasyExcel.read(file.getInputStream(), DicVO.class, new ExcelListener(iadministratorDivisionInterface, parseCode)).sheet("国家和地区名称代码").doRead();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
             default:
                 return "";
