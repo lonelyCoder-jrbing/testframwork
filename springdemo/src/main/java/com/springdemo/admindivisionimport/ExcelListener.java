@@ -3,6 +3,7 @@ package com.springdemo.admindivisionimport;
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
 import com.alibaba.fastjson.JSON;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -22,11 +23,17 @@ import java.util.UUID;
 public class ExcelListener extends AnalysisEventListener<DicVO> {
     private AdministratorDivisionInterface iadministratorDivision;
 
+    private static final String adminPccId = "8d0129f6b65946af94bbbeae339008bf";
+    private static final String adminCId = "7672d9f713804830b044de5134f949d5";
+
+    private String parseType;
+
     public ExcelListener() {
     }
 
-    public ExcelListener(AdministratorDivisionInterface iadministratorDivision) {
+    public ExcelListener(AdministratorDivisionInterface iadministratorDivision, String parseType) {
         this.iadministratorDivision = iadministratorDivision;
+        this.parseType = parseType;
     }
 
     /**
@@ -39,24 +46,30 @@ public class ExcelListener extends AnalysisEventListener<DicVO> {
     public void invoke(DicVO dicVO, AnalysisContext analysisContext) {
         log.info("解析到一条数据:{}", JSON.toJSONString(dicVO));
 
-        list.add(convertData(dicVO));
+        list.add(convertData(dicVO, parseType));
         if (list.size() >= BATCH_COUNT) {
             saveData();
             list.clear();
         }
     }
 
-    private AdministratorDivisionBO convertData(DicVO dicVO) {
+
+    private AdministratorDivisionBO convertData(DicVO dicVO, String parseType) {
         AdministratorDivisionBO administratorDivisionBO = new AdministratorDivisionBO();
         administratorDivisionBO.setDataKey(dicVO.getCode().trim());
         administratorDivisionBO.setDataValue(dicVO.getName().trim());
-        administratorDivisionBO.setDataDictionary("8d0129f6b65946af94bbbeae339008bf");
-        administratorDivisionBO.setDataDictionaryCode("administrativeDivision");
+        if ("0001".equals(parseType)) {
+            administratorDivisionBO.setDataDictionary(adminPccId);
+            administratorDivisionBO.setDataDictionaryCode("administrativeDivision_pcc");
+        } else {
+            administratorDivisionBO.setDataDictionary(adminCId);
+            administratorDivisionBO.setDataDictionaryCode("administrativeDivision_c");
+        }
         administratorDivisionBO.setParent_id("");
         administratorDivisionBO.setCreatedTime(new Date());
         administratorDivisionBO.setCreater("37F9A430AE1A45D3A106BECD12EF8F47");
         administratorDivisionBO.setBusiness_id("");
-        administratorDivisionBO.setId(UUID.randomUUID().toString().replaceAll("-",""));
+        administratorDivisionBO.setId(UUID.randomUUID().toString().replaceAll("-", ""));
         administratorDivisionBO.setCreatedDeptId("833089A1DC3B4E1E8B625408F798B8CC");
         administratorDivisionBO.setNumber1596185401203(new BigDecimal(1));
         administratorDivisionBO.setModifiedTime(new Date());

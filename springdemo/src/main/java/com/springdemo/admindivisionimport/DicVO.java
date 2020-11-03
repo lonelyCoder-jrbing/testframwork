@@ -14,13 +14,13 @@ public class DicVO {
     /**
      * 姓名
      */
-    @ExcelProperty(value = "行政区划代码")
+    @ExcelProperty(value = "代码")
     @Length(min = 1, max = 3)
     private String code;
     /**
      *
      */
-    @ExcelProperty(value = "单位名称")
+    @ExcelProperty(value = "代码名称")
     @Length(min = 1, max = 3)
     private String name;
 

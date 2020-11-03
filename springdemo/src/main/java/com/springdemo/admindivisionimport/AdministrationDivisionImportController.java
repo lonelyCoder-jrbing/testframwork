@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/api/oa/related")
@@ -20,12 +21,24 @@ public class AdministrationDivisionImportController {
     AdministratorDivisionInterface iadministratorDivisionInterface;
 
     @PostMapping("/uploadWithConstructor")
-    public String uploadWithConstructor(@RequestBody MultipartFile file) throws IOException {
-        EasyExcel.read(file.getInputStream(), DicVO.class, new ExcelListener(iadministratorDivisionInterface)).sheet("行政区划").doRead();
+    public String uploadWithConstructor(@RequestBody MultipartFile file, String parseCode) throws IOException {
+
+        if (Objects.isNull(parseCode)) {
+            return "";
+        }
+        switch (parseCode) {
+            case "0001":
+                EasyExcel.read(file.getInputStream(), DicVO.class, new ExcelListener(iadministratorDivisionInterface, parseCode)).sheet("行政区划").doRead();
+                break;
+            case "0002":
+                EasyExcel.read(file.getInputStream(), DicVO.class, new ExcelListener(iadministratorDivisionInterface, parseCode)).sheet("国家和地区名称代码").doRead();
+                break;
+            default:
+                return "";
+        }
+
         return "success";
     }
-
-
 
 
 }
