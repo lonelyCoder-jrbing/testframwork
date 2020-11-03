@@ -13,7 +13,7 @@ public class Test01 {
 
     public static void main(String[] args) {
         String[] str = {"jrbing001", "jrbing002"};
-        ArrayList<Student> students = Lists.newArrayList();
+        List<Student> students = Lists.newArrayList();
         Student student = new Student();
         student.setName("第一位");
         student.setNumber(1);
@@ -27,6 +27,8 @@ public class Test01 {
         student2.setNumber(2);
         student2.setName("第仨位");
         students.add(student2);
+        students = students.subList(0,2);
+        System.out.println(students);
 /*
     Map<Integer, Student> studentMap = students.stream()
         .collect(Collectors.toMap(Student::getNumber, Function.identity()));
