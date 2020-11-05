@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
@@ -20,7 +19,10 @@ public class DataDealController {
     private static final Map<String, String> strMap = new ConcurrentHashMap<>();
     private static final String chinaId = "8e44c01dbc6245389961f9bcca384de2";
 
-    @PostMapping("/dealData")
+    /****
+     * 处理省数据
+     */
+    @PostMapping("/dealProvinceData")
     public void dealData() {
         List<AdministratorDivisionBO> all = administratorDivisionRepository.findAll();
         List<AdministratorDivisionBO> collect = all.stream().filter(el -> "administrativeDivision_pcc".equals(el.getDataDictionaryCode()) && Objects.nonNull(el.getDataKey()))
@@ -57,6 +59,9 @@ public class DataDealController {
         });
     }
 
+    /****
+     * 处理城市数据
+     */
     @PostMapping("/dealCityData")
     public void dealCityData() {
         List<AdministratorDivisionBO> all = administratorDivisionRepository.findAll();

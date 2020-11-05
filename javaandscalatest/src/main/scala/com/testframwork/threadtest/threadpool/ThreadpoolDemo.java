@@ -24,9 +24,9 @@ public class ThreadpoolDemo {
 //        demo01();
 //        demmo02();
 //        demo03();
-//        demo04();
+        demo04();
 //        timer2();
-      new ThreadpoolDemo().run("j1","j2","j3");
+//      new ThreadpoolDemo().run("j1","j2","j3");
     }
 
     /***
@@ -110,21 +110,22 @@ public class ThreadpoolDemo {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:MM:SS");
         ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(2);
         long l = System.currentTimeMillis();
-        System.out.println("begin:   " + l);
-        for (int i = 0; i < 2; i++) {
+        System.out.println("begin:   " + new Date(l));
+//        for (int i = 0; i < 2; i++) {
             scheduledExecutorService.scheduleWithFixedDelay(() -> {
                 System.out.println(Thread.currentThread().getName() + "正在执行" + "currentTime:{}" + new Date());
             }, 1, 3, TimeUnit.SECONDS);
-        }
+//        }
         System.out.println("now:   " + System.currentTimeMillis());
-        for (; ; ) {
-            if (System.currentTimeMillis() - l > 10000) {
-                System.out.println("now:   " + System.currentTimeMillis());
-                scheduledExecutorService.shutdown();
-
-                return "";
-            }
-        }
+//        for (; ; ) {
+//            if (System.currentTimeMillis() - l > 10000) {
+//                System.out.println("now:   " + System.currentTimeMillis());
+//                scheduledExecutorService.shutdown();
+//
+//                return "";
+//            }
+//        }
+        return "";
     }
 
 
