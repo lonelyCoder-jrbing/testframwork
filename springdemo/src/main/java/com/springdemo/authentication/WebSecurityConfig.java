@@ -55,8 +55,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements W
         UserDetails u1 = User.withUsername("yejiawei").password(encrytedPassword).roles("ADMIN").build();
         UserDetails u2 = User.withUsername("donglei").password(encrytedPassword).roles("USER").build();
 
-        mngConfig.withUser(u1);
-        mngConfig.withUser(u2);
+//        mngConfig.withUser(u1);
+//        mngConfig.withUser(u2);
     }
 
     @Override

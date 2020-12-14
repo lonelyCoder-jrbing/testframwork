@@ -22,7 +22,7 @@ public class Authenication extends BasicAuthenticationEntryPoint {
     }
 
     @Override
-    public void afterPropertiesSet(){
+    public void afterPropertiesSet() throws Exception {
         setRealmName("yejiawei");
         super.afterPropertiesSet();
     }
