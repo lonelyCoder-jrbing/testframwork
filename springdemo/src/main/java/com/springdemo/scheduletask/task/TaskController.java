@@ -4,6 +4,7 @@ import com.springdemo.scheduletask.quartz.CallbackType;
 import com.springdemo.scheduletask.quartz.JobModel;
 import com.springdemo.scheduletask.quartz.SchedulerExecuteType;
 import com.springdemo.scheduletask.quartz.SchedulerService;
+import com.springdemo.scheduletask.spring.SpringContextUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -26,15 +29,15 @@ public class TaskController {
     @Autowired
     private MonitorFacade facade;
 
-    @GetMapping(value = "/demo/request")
-//    @Scheduled(cron = "0 0 1 * * ?")    //每天凌晨1点执行
-    @Scheduled(fixedRate = 5000)
-    public void leadOthers() {
-        facade.makeMoney();
-        facade.wakeup();
-        facade.sleep();
-
-    }
+//    @GetMapping(value = "/demo/request")
+////    @Scheduled(cron = "0 0 1 * * ?")    //每天凌晨1点执行
+//    @Scheduled(fixedRate = 5000)
+//    public void leadOthers() {
+//        facade.makeMoney();
+//        facade.wakeup();
+//        facade.sleep();
+//
+//    }
 
     @Autowired
     private SchedulerService schedulerService;
@@ -84,5 +87,17 @@ public class TaskController {
         schedulerService.createJob("123",jobModel);
 
     }
+
+
+    @GetMapping(value = "/demo/request2")
+    public void request2() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+
+        Object monitorFacade = SpringContextUtils.getBean("MonitorFacade");
+        Method wakeup = monitorFacade.getClass().getDeclaredMethod("wakeup");
+        wakeup.setAccessible(true);
+        Object invoke = wakeup.invoke(monitorFacade);
+
+    }
+
 
 }

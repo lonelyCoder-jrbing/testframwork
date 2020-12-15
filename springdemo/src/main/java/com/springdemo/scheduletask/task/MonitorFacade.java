@@ -9,7 +9,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service(value = "MonitorFacade")
 public class MonitorFacade {
 
     private List<People> peoples;

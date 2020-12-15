@@ -11,6 +11,7 @@ public class QueueCallbackStrategy implements CallbackStrategy {
     public QueueCallbackStrategy() {
     }
 
+    @Override
     public boolean callback(JobModel jobModel) {
         this.logger.debug("Start to invoke QueueCallback...");
         this.logger.error("========暂未实现该方法!");
