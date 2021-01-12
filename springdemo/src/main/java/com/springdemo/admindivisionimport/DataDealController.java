@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
@@ -112,6 +113,15 @@ public class DataDealController {
                 .stream()
                 .filter(el -> el.getDataKey().contains("0000"))
                 .collect(Collectors.toMap(AdministratorDivisionBO::getDataKey, AdministratorDivisionBO::getId, (k1, k2) -> k1));
+    }
+
+    /****
+     * demo
+     */
+    @PostMapping("/demo")
+    public String demo() {
+        log.info("demo.......");
+        return "hello skywaking";
     }
 
 }

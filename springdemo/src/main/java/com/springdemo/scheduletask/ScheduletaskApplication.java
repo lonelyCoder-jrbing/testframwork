@@ -6,6 +6,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling    //允许进行定时任务
+//@EnablePrometheusEndpoint
 public class ScheduletaskApplication {
 
     public static void main(String[] args) {

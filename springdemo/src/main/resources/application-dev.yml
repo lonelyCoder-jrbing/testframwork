@@ -1,6 +1,9 @@
+
 server:
-  port: 9090
+  port: 9093
 spring:
+  application:
+    name: HelloWorld
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT&serverTimezone=Asia/Shanghai
 #    type: com.alibaba.druid.pool.DruidDataSource
@@ -15,3 +18,19 @@ spring:
 #    hibernate:
 #      ddl-auto: update
 #    show-sql: true
+management:
+  security:
+    enabled: false
+    #prometheus+grafana+springboot2监控集成配置
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+      jmx:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /metrics
+      #prometheus+grafana+springboot2监控集成配置

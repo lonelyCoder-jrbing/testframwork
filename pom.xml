@@ -36,6 +36,7 @@
         <module>esdemo</module>
         <module>redisdemo</module>
         <module>rabbitmqtest</module>
+        <module>prometheusdemo</module>
     </modules>
 
 
